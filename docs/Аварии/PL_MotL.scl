@@ -1,0 +1,835 @@
+﻿FUNCTION_BLOCK "PL_MotL"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      BlockIcon { S7_HiddenAssignment := 'Hide'} : Int := 1;
+      StartAut { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      StopAut { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      StartMan : Bool;
+      "StartMan#Op_Level" { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'; S7_HiddenAssignment := 'Hide'; CFC_Visible := 'false'} : UInt := 1;
+      StopMan : Bool;
+      ModLiOp : "PL_Dig";
+      AutModOp : Bool;
+      ManModOp : Bool := true;
+      AutModLi { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : "PL_Dig";
+      ManModLi { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : "PL_Dig";
+      LocalLi { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : "PL_Dig";
+      LocalOp : Bool;
+      OosOp : Bool;
+      OosLi { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : "PL_Dig";
+      StartLocal { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      StopLocal { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      LocalSetting { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+      FbkRun { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      Monitor : Bool := true;
+      MonTiStatic : Time := T#3s;
+      MonTiDynamic : Time := T#3s;
+      MonTiDyStop : Time := T#3s;
+      IdleTime : Time := T#5s;
+      PulseWidth { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Time := T#3s;
+      WarnTiMan : Time;
+      WarnTiAut : Time;
+      RapidStp : Bool;
+      RstOp : Bool;
+      RstLi : Byte;
+      BypProt : Bool;
+      Trip : Byte := 16#8A;
+      Permit : Byte := 16#8A;
+      Perm_En : Bool := true;
+      Intlock : Byte := 16#8A;
+      Intl_En : Bool := true;
+      Protect : Byte := 16#8A;
+      Prot_en : Bool := true;
+      StartForce : Byte;
+      StopForce : Byte;
+      StartChnST { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : USInt;
+      MsgLock : Byte;
+      SimLiOp : Byte;
+      SimOnLi : Byte;
+      SimOn : Bool;
+      FaultExt : Byte;
+      CSF : Byte;
+      SimAV : Real;
+      SimAV_Li : Real;
+      AV_AH_Lim : Real := 95.0;
+      AV_WH_Lim : Real := 90.0;
+      AV_TH_Lim : Real := 85.0;
+      AV_TL_Lim : Real := 15.0;
+      AV_WL_Lim : Real := 10.0;
+      AV_AL_Lim : Real := 5.0;
+      AV_Hyst : Real := 1.0;
+      AV : Real;
+      Feature { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'; CFC_Visible := 'false'} : Struct
+         Bit0 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit1 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit2 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit3 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit4 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit5 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit6 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit7 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit8 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit9 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit10 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit11 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit12 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit13 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit14 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit15 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit16 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit17 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit18 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit19 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit20 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit21 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit22 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit23 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit24 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit25 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit26 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit27 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit28 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit29 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit30 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit31 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      END_STRUCT;
+      Feature2 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'; CFC_Visible := 'false'} : Struct
+         Bit0 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit1 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit2 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit3 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit4 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit5 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit6 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit7 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit8 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit9 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit10 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit11 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit12 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit13 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit14 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit15 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit16 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit17 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit18 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit19 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit20 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit21 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit22 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit23 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit24 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit25 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit26 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit27 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit28 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit29 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit30 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit31 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      END_STRUCT;
+   END_VAR
+
+   VAR_OUTPUT 
+      MonDynErr { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      MonDynStopErr { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      MonStaErr { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      CurrMon { ExternalVisible := 'False'; ExternalWritable := 'False'} : Time;
+      R_StpAct { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      LockAct { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      GrpErr { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      RdyToStart { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      RdyToReset { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      WarnAct { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      Start { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      P_Start { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      P_Stop { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte := 16#8A;
+      P_Rst { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      LocalAct { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : "PL_Dig";
+      AutAct { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : "PL_Dig";
+      ManAct { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : "PL_Dig";
+      OosAct { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : "PL_Dig";
+      FbkRunOut { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      Run { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      Stop { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;
+      AV_Out { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Real;
+      OS_PermOut { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'; CFC_Visible := 'false'} : DWord := DWORD#16#FFFF_FFFF;
+      OS_PermLog { ExternalVisible := 'False'; ExternalWritable := 'False'; CFC_Visible := 'false'} : DWord;
+      OpSt_Out { ExternalVisible := 'False'; ExternalWritable := 'False'; CFC_Visible := 'false'} : DWord;
+      ST_Worst { ExternalVisible := 'False'; ExternalWritable := 'False'; CFC_Visible := 'false'} : Byte := BYTE#16#80;
+      AutoST { ExternalVisible := 'False'; ExternalWritable := 'False'; CFC_Visible := 'false'} : Byte := BYTE#16#80;
+      Status1 { ExternalVisible := 'False'; ExternalWritable := 'False'} : DWord;
+      Status2 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Struct
+         Bit0 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit1 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit2 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit3 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit4 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit5 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit6 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit7 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit8 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit9 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit10 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit11 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit12 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit13 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit14 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit15 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit16 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit17 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit18 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit19 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit20 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit21 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit22 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit23 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit24 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit25 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit26 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit27 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit28 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit29 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit30 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit31 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      END_STRUCT;
+      Status3 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Struct
+         Bit0 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit1 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit2 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit3 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit4 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit5 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit6 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit7 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit8 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit9 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit10 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit11 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit12 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit13 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit14 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit15 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit16 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit17 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit18 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit19 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit20 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit21 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit22 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit23 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit24 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit25 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit26 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit27 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit28 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit29 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit30 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit31 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      END_STRUCT;
+      Status4 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Struct
+         Bit0 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit1 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit2 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit3 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit4 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit5 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit6 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit7 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit8 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit9 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit10 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit11 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit12 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit13 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit14 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit15 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit16 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit17 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit18 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit19 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit20 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit21 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit22 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit23 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit24 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit25 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit26 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit27 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit28 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit29 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit30 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit31 { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      END_STRUCT;
+      Status5 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Struct
+         Bit0 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit1 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit2 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit3 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit4 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit5 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit6 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit7 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit8 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit9 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit10 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit11 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit12 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit13 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit14 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit15 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit16 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit17 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit18 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit19 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit20 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit21 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit22 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit23 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit24 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit25 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit26 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit27 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit28 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit29 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit30 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         Bit31 { ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      END_STRUCT;
+      ErrorNum { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int := -1;
+      EventState { ExternalVisible := 'False'; ExternalWritable := 'False'} : "EventState";
+   END_VAR
+
+   VAR 
+      "OCM#StartMan#Op_Level" { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : USInt := 1;
+      "OCM#StartMan#string_1" { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Char;   // Пуск из блока
+      Msg1 { ExternalVisible := 'False'; ExternalWritable := 'False'} : "Event";
+      stat { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Struct
+         prev { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Struct
+            StartAut { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+            StopAut { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+            Start { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         END_STRUCT;
+         Err { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Struct
+            GrpErr { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+            Trip { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+            FaultExt { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+            CSF { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+            MonDynErr { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+            MonDynStopErr { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+            MonStaErr { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+            Permit { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+            Intlock { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+            Protect { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         END_STRUCT;
+         InitComplete { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         SampleTime { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Time;
+         Start { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         MonTiStaticAct { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Time;
+         P_Start_Act { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Time;
+         P_Stop_Act { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Time;
+         ResetNeededMonErr { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         ResetNeededTrip { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+         ResetNeededFaultExtCSF { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      END_STRUCT;
+      SM { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : "SM_StateMachine";
+      instOM { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : "PL_Aux_OperatingModes";
+      msgTrip { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : "DG_Msg";
+   END_VAR
+
+   VAR_TEMP 
+      temp : Struct
+         nullMsg : "DG_udtMsg";
+         Bo : Bool;
+         Dw : DWord;
+         I : Int;
+         SimAct : Bool;
+         ForceInputActive : Bool;
+         InvalidCommand : Bool;
+         Interlocked : Bool;
+         BadAutST : Bool;
+      END_STRUCT;
+      Tr : "SM_Tr";
+      tempRst : Bool;
+      tempStart : Bool;
+      i : Int;
+   END_VAR
+
+   VAR CONSTANT 
+      ST_STOP : Int;
+      ST_PREWARN : Int := 1;
+      ST_STARTING : Int := 2;
+      ST_RUN : Int := 3;
+      ST_STOPPING : Int := 4;
+      ST_ALARM : Int := 5;
+      ST_IDLE : Int := 6;
+      ST_FORCESTART : Int := 7;
+   END_VAR
+
+
+BEGIN
+	(*
+	
+	Status1:
+	Bit0    Bool    false   Non-retain  False   False   False   False   Occupied
+	Bit1    Bool    false   Non-retain  False   False   False   False   BatchEn
+	Bit2    Bool    false   Non-retain  False   False   False   False   SimOn
+	Bit4    Bool    false   Non-retain  False   False   False   False   OosLi.Value
+	Bit7    Bool    false   Non-retain  False   False   False   False   0: Open padlock
+	Bit8    Bool    false   Non-retain  False   False   False   False   Start.Value
+	Bit9    Bool    false   Non-retain  False   False   False   False   Stop.Value
+	Bit10   Bool    false   Non-retain  False   False   False   False   MonDynStopErr.Value
+	Bit11   Bool    false   Non-retain  False   False   False   False   MonStaErr.Value
+	Bit12   Bool    false   Non-retain  False   False   False   False   MonDynErr.Value
+	Bit13   Bool    false   Non-retain  False   False   False   False   BypProt
+	Bit14   Bool    false   Non-retain  False   False   False   False   Invalid signal status
+	Bit15   Bool    false   Non-retain  False   False   False   False   Mode switchover error
+	Bit16   Bool    false   Non-retain  False   False   False   False   1 = Intlock is active
+	Bit17   Bool    false   Non-retain  False   False   False   False   1 = Permit is active
+	Bit18   Bool    false   Non-retain  False   False   False   False   1 = Protect is active
+	Bit19   Bool    false   Non-retain  False   False   False   False   Trip.Value
+	Bit20   Bool    false   Non-retain  False   False   False   False   Display "Forced start"
+	Bit21   Bool    false   Non-retain  False   False   False   False   Display "Forced stop"
+	Bit22   Bool    false   Non-retain  False   False   False   False   Not used
+	Bit23   Bool    false   Non-retain  False   False   False   False   "Interlock" button is enabled
+	Bit24   Bool    false   Non-retain  False   False   False   False   Reset request in automatic preview
+	Bit25   Bool    false   Non-retain  False   False   False   False   WarnAct.Value or Idle Time is active
+	Bit26   Bool    false   Non-retain  False   False   False   False   Bypass information from previous function block
+	Bit27   Bool    false   Non-retain  False   False   False   False   Automatic preview for "starting"
+	Bit28   Bool    false   Non-retain  False   False   False   False   Automatic preview for "stopping"
+	Bit29   Bool    false   Non-retain  False   False   False   False   FaultExt or CSF
+	Bit30   Bool    false   Non-retain  False   False   False   False   "Permission" button is enabled
+	Bit31   Bool    false   Non-retain  False   False   False   False   "Protection" button is enabled
+	
+	
+	OS_Perm:
+	Bit4    Bool    false   Non-retain  False   False   False   False   1 = Operator can stop the motor
+	Bit5    Bool    false   Non-retain  False   False   False   False   1 = Operator can start the motor
+	Bit6    Bool    false   Non-retain  False   False   False   False   Not used
+	Bit7    Bool    false   Non-retain  False   False   False   False   1 = Operator can reset the motor
+	Bit8    Bool    false   Non-retain  False   False   False   False   1 = Operator can define or change the monitoring time for startup
+	Bit9    Bool    false   Non-retain  False   False   False   False   1 = Operator can define the monitoring time for the status
+	Bit10   Bool    false   Non-retain  False   False   False   False   1 = Operator can enable the monitoring time function (Bit 8 - 9) 
+	Bit11   Bool    false   Non-retain  False   False   False   False   1 = Operator can activate the Simulation function
+	Bit12   Bool    false   Non-retain  False   False   False   False   1 = Operator can activate the Release for maintenance function
+	Bit13   Bool    false   Non-retain  False   False   False   False   1 = Operator can change the high limit (AV) for the alarm
+	Bit14   Bool    false   Non-retain  False   False   False   False   1 = Operator can change the high limit (AV) for the warning
+	Bit15   Bool    false   Non-retain  False   False   False   False   1 = Operator can change the high limit (AV) for the tolerance
+	Bit16   Bool    false   Non-retain  False   False   False   False   1 = Operator can change the limit (AV) for hysteresis
+	Bit17   Bool    false   Non-retain  False   False   False   False   1 = Operator can lower the limit (AV) for the alarm 
+	Bit18   Bool    false   Non-retain  False   False   False   False   1 = Operator can lower the limit (AV) for the warning
+	Bit19   Bool    false   Non-retain  False   False   False   False   1 = Operator can lower the limit (AV) for the tolerance
+	Bit20   Bool    false   Non-retain  False   False   False   False   1 = Operator can activate / deactivate messages via AV_AH_MsgEn
+	Bit21   Bool    false   Non-retain  False   False   False   False   1 = Operator can activate / deactivate messages via AV_WH_MsgEn
+	Bit22   Bool    false   Non-retain  False   False   False   False   1 = Operator can activate / deactivate messages via AV_TH_MsgEn
+	Bit23   Bool    false   Non-retain  False   False   False   False   1 = Operator can activate / deactivate messages via AV_TL_MsgEn
+	Bit24   Bool    false   Non-retain  False   False   False   False   1 = Operator can activate / deactivate messages via AV_WL_MsgEn
+	Bit25   Bool    false   Non-retain  False   False   False   False   1 = Operator can activate / deactivate messages via AV_AL_MsgEn
+	Bit26   Bool    false   Non-retain  False   False   False   False   1 = Operator can change the simulation value SimAV
+	Bit27   Bool    false   Non-retain  False   False   False   False   Not used
+	Bit28   Bool    false   Non-retain  False   False   False   False   Not used
+	Bit29   Bool    false   Non-retain  False   False   False   False   Not used
+	Bit30   Bool    false   Non-retain  False   False   False   False   1 = Operator can define the monitoring time for stopping
+	Bit31   Bool    false   Non-retain  False   False   False   False   Not used
+	
+	
+	
+	*)
+	
+	IF NOT #stat.InitComplete THEN
+	    "OBInfo"(Init := true,
+	             iOBClass => #temp.I,
+	             timSampleTime => #stat.SampleTime,
+	             xError => #temp.Bo,
+	             dwErrorID => #temp.Dw);
+	    #stat.InitComplete := true;
+	    RETURN;
+	END_IF;
+	
+	#CurrMon := T#0ms;
+	
+	// переключение режимов работы
+	#instOM(AutModLi := #AutModLi,
+	        LocalLi := #LocalLi,
+	        LocalSetting := #LocalSetting,
+	        ManModLi := #ManModLi,
+	        ModLiOp := #ModLiOp,
+	        OosLi := #OosLi,
+	        Feat_bit1 := #Feature.Bit1,
+	        Feat_bit4 := #Feature.Bit4,
+	        Feat_bit10 := #Feature.Bit10,
+	        AutModOp := #AutModOp,
+	        LocalOp := #LocalOp,
+	        ManModOp_OnOp := #ManModOp,
+	        OosOp := #OosOp,
+	        AutAct => #AutAct,
+	        LocalAct => #LocalAct,
+	        ManAct_OnAct => #ManAct,
+	        OosAct => #OosAct);
+	
+	#temp.SimAct := (NOT #SimLiOp.%X7 AND #SimOn) OR (#SimOnLi.%X7 AND #SimLiOp.%X7);
+	#temp.ForceInputActive := (#StartForce.%X7 OR #StopForce.%X7)
+	AND ((#LocalAct.Value AND #Feature2.Bit8
+	AND (#LocalSetting = 1 OR #LocalSetting = 3)) OR NOT #LocalAct.Value);
+	
+	#temp.BadAutST := ("PL_DigQC"(#StartAut) = "PL".QC.badDev OR "PL_DigQC"(#StartAut) = "PL".QC.badProc
+	OR "PL_DigQC"(#StopAut) = "PL".QC.badDev OR "PL_DigQC"(#StopAut) = "PL".QC.badProc)
+	AND #Feature2.Bit10;
+	
+	// блокировки
+	IF #instOM.AutAct.Value OR #instOM.ManAct_OnAct.Value THEN
+	    #stat.Err.Permit := NOT #Permit.%X7 AND #Perm_En AND #SM.iState = #ST_STOP;
+	    #stat.Err.Intlock := NOT #Intlock.%X7 AND #Intl_En;
+	    IF NOT #Protect.%X7 AND #Prot_en THEN
+	        #stat.Err.Protect := true;
+	    END_IF;
+	ELSIF #instOM.LocalAct.Value THEN
+	    IF (#LocalSetting = 1 OR #LocalSetting = 3) THEN
+	        #stat.Err.Permit := NOT #Permit.%X7 AND #Perm_En AND NOT #BypProt AND #SM.iState = #ST_STOP;
+	        #stat.Err.Intlock := NOT #Intlock.%X7 AND #Intl_En AND NOT #BypProt;
+	        IF NOT #Protect.%X7 AND #Prot_en AND NOT #BypProt THEN
+	            #stat.Err.Protect := true;
+	        END_IF;
+	    ELSIF (#LocalSetting = 2 OR #LocalSetting = 4 OR #LocalSetting = 5) THEN
+	        #stat.Err.Permit := false;
+	        #stat.Err.Intlock := false;
+	        #stat.Err.Protect := false;
+	    END_IF;
+	ELSIF #instOM.OosAct.Value THEN
+	    #stat.Err.Permit := false;
+	    #stat.Err.Intlock := false;
+	END_IF;
+	#temp.Interlocked := true;
+	
+	
+	IF NOT #Feature.Bit14 THEN
+	    #RapidStp := false;
+	END_IF;
+	
+	REGION Аварии
+	    // Trip
+	    IF NOT #Trip.%X7 THEN
+	        #stat.Err.Trip := true;
+	    END_IF;
+	    
+	    // FaultExt
+	    IF #FaultExt.%X7 THEN
+	        #stat.Err.FaultExt := true;
+	    END_IF;
+	    
+	    // CSF
+	    IF #CSF.%X7 AND #Feature.Bit18 THEN
+	        #stat.Err.CSF := true;
+	    END_IF;
+	    
+	    // MonStaErr
+	    IF (#Monitor AND #FbkRun.%X7 AND #SM.iState = #ST_STOP) OR
+	        (#Monitor AND NOT #FbkRun.%X7 AND #SM.iState = #ST_RUN) THEN
+	        #stat.MonTiStaticAct := #stat.MonTiStaticAct + #stat.SampleTime;
+	        #CurrMon := #MonTiStatic - #stat.MonTiStaticAct;
+	    ELSE
+	        #stat.MonTiStaticAct := T#0ms;
+	    END_IF;
+	    IF #stat.MonTiStaticAct >= #MonTiStatic THEN
+	        #stat.Err.MonStaErr := true;
+	    END_IF;
+	    
+	    // MonDynError
+	    IF (#SM.iState = #ST_STARTING AND #Monitor AND #SM.timState >= #MonTiDynamic)
+	        OR (#SM.iState = #ST_STOPPING AND #Monitor AND #SM.timState >= #MonTiDynamic) THEN
+	        #stat.Err.MonDynErr := true;
+	    END_IF;
+	    
+	    // GrpErr
+	    #stat.Err.GrpErr := #stat.Err.Trip OR #stat.Err.MonDynErr OR #stat.Err.MonDynStopErr OR #stat.Err.MonStaErr
+	    OR #stat.Err.Protect OR #stat.Err.FaultExt OR #stat.Err.CSF;
+	END_REGION
+	
+	REGION Команда пуск
+	    IF NOT #temp.ForceInputActive AND #LocalAct.Value THEN
+	        // местный режим
+	        #temp.InvalidCommand := NOT #Feature2.Bit4 AND #StartLocal.%X7 AND #StopLocal.%X7;
+	        IF #LocalSetting = 1 OR #LocalSetting = 3 THEN
+	            IF (#temp.InvalidCommand AND #Feature2.Bit3) OR #temp.Interlocked THEN
+	                #stat.Start := false;
+	            ELSIF NOT #temp.InvalidCommand AND NOT (#stat.ResetNeededMonErr OR #stat.ResetNeededTrip OR #stat.ResetNeededFaultExtCSF) THEN
+	                IF #Feature2.Bit4 THEN
+	                    IF #StartLocal.%X7 THEN
+	                        #stat.Start := true;
+	                    ELSE
+	                        #stat.Start := false;
+	                    END_IF;
+	                ELSE
+	                    IF #StartLocal.%X7 THEN
+	                        #stat.Start := true;
+	                    ELSIF #StopLocal.%X7 THEN
+	                        #stat.Start := false;
+	                    END_IF;
+	                END_IF;
+	            END_IF;
+	        ELSIF #LocalSetting = 2 OR #LocalSetting = 4 THEN
+	            IF #temp.SimAct THEN
+	                #stat.Start := #FbkRunOut.%X7;
+	            ELSE
+	                #stat.Start := #FbkRun.%X7;
+	            END_IF;
+	        END_IF;
+	    ELSIF #StartForce.%X7 OR #StopForce.%X7 THEN
+	        #temp.InvalidCommand := #StartForce.%X7 AND #StopForce.%X7;
+	        #OS_PermLog.%X5 := false;
+	        #OS_PermLog.%X4 := false;
+	        IF #temp.InvalidCommand THEN
+	            IF #Feature2.Bit3 THEN
+	                #stat.Start := false;
+	            END_IF;
+	        ELSE
+	            IF #StartForce.%X7 THEN
+	                #stat.Start := true;
+	            ELSIF #StopForce.%X7 THEN
+	                #stat.Start := false;
+	            END_IF;
+	        END_IF;
+	    ELSIF #instOM.AutAct.Value THEN
+	        // автоматический режим
+	        #temp.InvalidCommand := NOT #Feature.Bit4 AND #StartAut.%X7 AND #StopAut.%X7;
+	        IF (#temp.InvalidCommand AND #Feature2.Bit3) OR #temp.Interlocked OR #temp.BadAutST THEN
+	            #stat.Start := false;
+	        ELSIF NOT #temp.InvalidCommand AND NOT (#stat.ResetNeededMonErr OR #stat.ResetNeededTrip OR #stat.ResetNeededFaultExtCSF) THEN
+	            IF #StartAut.%X7 THEN
+	                #stat.Start := true;
+	            ELSIF (NOT #Feature.Bit4 AND #StopAut.%X7) OR (NOT #StartAut.%X7 AND #Feature.Bit4) THEN
+	                #stat.Start := false;
+	            END_IF;
+	        END_IF;
+	    ELSIF #instOM.ManAct_OnAct.Value THEN
+	        // ручной режим
+	        #temp.InvalidCommand := #StopMan AND #StartMan;
+	        IF #temp.InvalidCommand THEN
+	            #OS_PermLog.%X5 := false;
+	            #OS_PermLog.%X4 := false;
+	        END_IF;
+	        IF (#temp.InvalidCommand AND #Feature2.Bit3) OR #temp.Interlocked THEN
+	            #stat.Start := false;
+	        ELSIF NOT #temp.InvalidCommand AND NOT (#stat.ResetNeededMonErr OR #stat.ResetNeededTrip OR #stat.ResetNeededFaultExtCSF) THEN
+	            IF #StartMan THEN
+	                #stat.Start := true;
+	            ELSIF #StopMan THEN
+	                #stat.Start := false;
+	            END_IF;
+	        END_IF;
+	    ELSIF #instOM.OosAct.Value THEN
+	        // вывод из эксплуатации
+	        #stat.Start := false;
+	    END_IF;
+	END_REGION
+	
+	REGION Переходы состояния
+	    "SM_Init"(#Tr);
+	    
+	    #Tr.t[#ST_STOP, #ST_FORCESTART] := "SM_Trans"(C := #StartForce.%X7 AND #instOM.AutAct.Value, P := 0);
+	    #Tr.t[#ST_STOP, #ST_ALARM] := "SM_Trans"(C := #stat.Err.GrpErr, P := 1);
+	    #Tr.t[#ST_STOP, #ST_PREWARN] := "SM_Trans"(C := ((#instOM.AutAct.Value OR #instOM.ManAct_OnAct.Value) AND #stat.Start)
+	                                               OR (#StartForce.%X7 AND #instOM.ManAct_OnAct.Value), P := 2);
+	    #Tr.t[#ST_STOP, #ST_STARTING] := "SM_Trans"(C := #instOM.LocalAct.Value AND (#LocalSetting = 1 OR #LocalSetting = 3) AND #stat.Start, P := 3);
+	    #Tr.t[#ST_STOP, #ST_RUN] := "SM_Trans"(C := #instOM.LocalAct.Value AND (#LocalSetting = 2 OR #LocalSetting = 4) AND #FbkRun.%X7, P := 4);
+	    
+	    
+	    #Tr.t[#ST_PREWARN, #ST_FORCESTART] := "SM_Trans"(C := #StartForce.%X7 AND #SM.timState >= #WarnTiMan, P := 0);
+	    #Tr.t[#ST_PREWARN, #ST_ALARM] := "SM_Trans"(C := #stat.Err.GrpErr, P := 1);
+	    #Tr.t[#ST_PREWARN, #ST_STARTING] := "SM_Trans"(C := (#instOM.AutAct.Value AND #SM.timState >= #WarnTiAut) OR
+	                                                   (#instOM.ManAct_OnAct.Value AND #SM.timState >= #WarnTiMan) OR
+	                                                   #instOM.LocalAct.Value, P := 2);
+	    #Tr.t[#ST_PREWARN, #ST_STOPPING] := "SM_Trans"(C := NOT #stat.Start, P := 3);
+	    
+	    #Tr.t[#ST_STARTING, #ST_FORCESTART] := "SM_Trans"(C := #StartForce.%X7 AND (#instOM.AutAct.Value OR #instOM.ManAct_OnAct.Value), P := 0);
+	    #Tr.t[#ST_STARTING, #ST_ALARM] := "SM_Trans"(C := #stat.Err.GrpErr, P := 1);
+	    #Tr.t[#ST_STARTING, #ST_RUN] := "SM_Trans"(C := NOT #Monitor OR (#Monitor AND #FbkRun.%X7), P := 2);
+	    #Tr.t[#ST_STARTING, #ST_ALARM] := "SM_Trans"(C := #stat.Err.MonDynErr, P := 3);
+	    #Tr.t[#ST_STARTING, #ST_STOPPING] := "SM_Trans"(C := NOT #stat.Start, P := 4);
+	    
+	    #Tr.t[#ST_RUN, #ST_FORCESTART] := "SM_Trans"(C := #StartForce.%X7 AND (#instOM.AutAct.Value OR #instOM.ManAct_OnAct.Value), P := 0);
+	    #Tr.t[#ST_RUN, #ST_ALARM] := "SM_Trans"(C := #stat.Err.GrpErr, P := 1);
+	    #Tr.t[#ST_RUN, #ST_STOP] := "SM_Trans"(C := #instOM.LocalAct.Value AND (#LocalSetting = 2 OR #LocalSetting = 4) AND NOT #FbkRun.%X7, P := 2);
+	    #Tr.t[#ST_RUN, #ST_STOPPING] := "SM_Trans"(C := NOT #stat.Start, P := 3);
+	    
+	    #Tr.t[#ST_STOPPING, #ST_FORCESTART] := "SM_Trans"(C := #StartForce.%X7 AND (#instOM.AutAct.Value OR #instOM.ManAct_OnAct.Value), P := 0);
+	    #Tr.t[#ST_STOPPING, #ST_ALARM] := "SM_Trans"(C := #stat.Err.GrpErr, P := 1);
+	    #Tr.t[#ST_STOPPING, #ST_IDLE] := "SM_Trans"(C := NOT #Monitor OR (#Monitor AND NOT #FbkRun.%X7), P := 2);
+	    #Tr.t[#ST_STOPPING, #ST_ALARM] := "SM_Trans"(C := #stat.Err.MonDynErr, P := 3);
+	    
+	    #Tr.t[#ST_ALARM, #ST_FORCESTART] := "SM_Trans"(C := #StartForce.%X7 AND (#instOM.AutAct.Value OR #instOM.ManAct_OnAct.Value), P := 0);
+	    #Tr.t[#ST_ALARM, #ST_STOP] := "SM_Trans"(C := NOT #stat.Err.GrpErr, P := 1);
+	    
+	    #Tr.t[#ST_IDLE, #ST_STOP] := "SM_Trans"(C := #SM.timState >= #IdleTime, P := 0);
+	    
+	    #Tr.t[#ST_FORCESTART, #ST_STOP] := "SM_Trans"(C := NOT #StartForce.%X7 OR NOT (#instOM.AutAct.Value OR #instOM.ManAct_OnAct.Value), P := 0);
+	    
+	    #SM(aTr := #Tr);
+	END_REGION
+	
+	// состояние оборудования
+	CASE #SM.iState OF
+	        
+	    #ST_STARTING:
+	        #CurrMon := #MonTiDynamic - #SM.timState;
+	        
+	    #ST_STOPPING:
+	        #CurrMon := #MonTiDynamic - #SM.timState;
+	        
+	    #ST_ALARM:
+	        #stat.Start := false;
+	        
+	        #tempRst := false;
+	        IF #instOM.AutAct.Value THEN
+	            // автоматический режим
+	            IF NOT #Feature.Bit9 AND NOT #Feature.Bit30 THEN
+	                #tempRst := #RstLi.%X7 OR #RstOp;
+	            ELSIF #Feature.Bit9 AND NOT #Feature.Bit30 THEN
+	                #tempRst := #RstLi.%X7 OR #RstOp OR (#StartAut.%X7 AND NOT #stat.prev.StartAut) OR (#StopAut.%X7 AND NOT #stat.prev.StopAut);
+	            ELSIF NOT #Feature.Bit9 AND #Feature.Bit30 THEN
+	                #tempRst := #RstLi.%X7;
+	            ELSIF #Feature.Bit9 AND #Feature.Bit30 THEN
+	                #tempRst := #RstLi.%X7 OR (#StartAut.%X7 AND NOT #stat.prev.StartAut) OR (#StopAut.%X7 AND NOT #stat.prev.StopAut);
+	            END_IF;
+	        ELSIF #instOM.LocalAct.Value THEN
+	            // местный режим
+	            IF #LocalSetting = 1 OR #LocalSetting = 3 THEN
+	                #tempRst := #StopLocal.%X7;
+	            ELSIF #LocalSetting = 2 OR #LocalSetting = 4 THEN
+	                #tempRst := true;
+	            END_IF;
+	        ELSIF #instOM.ManAct_OnAct.Value THEN
+	            // ручной режим
+	            IF NOT #Feature.Bit30 AND NOT #Feature.Bit31 THEN
+	                #tempRst := true;
+	            ELSIF #Feature.Bit30 AND NOT #Feature.Bit31 THEN
+	                #tempRst := true;
+	            ELSIF NOT #Feature.Bit30 AND #Feature.Bit31 THEN
+	                #tempRst := #RstLi.%X7 OR #RstOp;
+	            ELSIF #Feature.Bit30 AND #Feature.Bit31 THEN
+	                #tempRst := #RstOp;
+	            END_IF;
+	        ELSIF #instOM.OosAct.Value THEN
+	            // вывод из эксплуатации
+	            #tempRst := true;
+	        END_IF;
+	        
+	        IF #tempRst THEN
+	            #stat.Err.Trip := NOT #Trip.%X7;
+	            #stat.Err.FaultExt := #FaultExt.%X7;
+	            #stat.Err.CSF := #CSF.%X7;
+	            #stat.Err.MonDynErr := false;
+	            #stat.Err.MonDynStopErr := false;
+	            #stat.Err.MonStaErr := #FbkRun.%X7;
+	            #stat.Err.Protect := NOT #Protect.%X7;
+	        END_IF;
+	        
+	END_CASE;
+	
+	// запись выходов
+	#MonDynErr := "PL_DigAddQC"(Value := #stat.Err.MonDynErr, QC := "PL".QC.good);
+	#MonDynStopErr := "PL_DigAddQC"(Value := #stat.Err.MonDynStopErr, QC := "PL".QC.good);
+	#MonStaErr := "PL_DigAddQC"(Value := #stat.Err.MonStaErr, QC := "PL".QC.good);
+	
+	#R_StpAct.%X7 := false;
+	#LockAct.%X7 := #stat.Err.Permit OR #stat.Err.Intlock OR #stat.Err.Protect OR #stat.Err.Trip;
+	#GrpErr.%X7 := #stat.Err.MonDynErr OR #stat.Err.MonDynStopErr OR #stat.Err.MonStaErr OR #CSF.%X7 OR #FaultExt.%X7 OR NOT #Trip.%X7;
+	#RdyToStart.%X7 := NOT (#stat.Err.MonDynErr OR #stat.Err.MonDynStopErr OR #stat.Err.MonStaErr OR (#CSF.%X7 AND #Feature.Bit18) OR #FaultExt.%X7 OR NOT #Trip.%X7)
+	AND #SM.iState = #ST_STOP AND #instOM.AutAct.Value AND NOT #StopForce.%X7 AND NOT #LockAct.%X7 AND NOT #R_StpAct.%X7;
+	#WarnAct.%X7 := #SM.iState = #ST_PREWARN;
+	#tempStart := #SM.iState = #ST_STARTING
+	OR #SM.iState = #ST_RUN
+	OR #SM.iState = #ST_FORCESTART;
+	#Start.%X7 := #tempStart;
+	IF #tempStart AND NOT #stat.prev.Start THEN
+	    #stat.P_Start_Act := #PulseWidth;
+	ELSIF NOT #tempStart AND #stat.prev.Start THEN
+	    #stat.P_Stop_Act := #PulseWidth;
+	END_IF;
+	#P_Start.%X7 := #stat.P_Start_Act > 0 AND #tempStart;
+	#P_Stop.%X7 := NOT (#stat.P_Stop_Act > 0 AND NOT #tempStart);
+	#FbkRunOut := #FbkRun;
+	
+	#Run := "PL_DigAddQC"(Value := #SM.iState = #ST_RUN,
+	                      QC := "PL_DigQC"(#FbkRunOut));
+	
+	#Stop := "PL_DigAddQC"(Value := #SM.iState = #ST_STOP OR #SM.iState = #ST_IDLE,
+	                       QC := "PL_DigQC"(#FbkRunOut));
+	
+	REGION ErrorNum
+	    IF #temp.InvalidCommand THEN
+	        #ErrorNum := 51;
+	    END_IF;
+	END_REGION
+	
+	
+	REGION Status1
+	    #Status1.%X0 := false;
+	    #Status1.%X1 := false;
+	    #Status1.%X2 := #temp.SimAct;
+	    #Status1.%X3 := #OosAct.Value;      // OosAct.Value
+	    #Status1.%X5 := #AutAct.Value;      // 0 = ManAct.Value; 1 = AutoAct.Value
+	    #Status1.%X6 := #LocalAct.Value;        // LocalAct.Value
+	    
+	    #Status1.%X8 := "PL_DigValue"(#Start);
+	    #Status1.%X9 := NOT #Status1.%X8;
+	    #Status1.%X10 := "PL_DigValue"(#MonDynStopErr);
+	    #Status1.%X11 := "PL_DigValue"(#MonStaErr);
+	    #Status1.%X12 := "PL_DigValue"(#MonDynErr) OR "PL_DigValue"(#MonDynStopErr);
+	    #Status1.%X13 := ((#BypProt AND #temp.SimAct) OR
+	    (#LocalSetting = 1 OR #LocalSetting = 3) AND #LocalAct.Value AND #BypProt)
+	    OR ((#LocalSetting = 2 OR #LocalSetting = 4) AND #LocalAct.Value AND
+	    (NOT #Feature.Bit27 OR #BypProt)) OR #temp.ForceInputActive;
+	END_REGION
+	
+	
+	REGION OS_Perm
+	    #OS_PermLog.%X0 := NOT #AutAct.Value;   //1 = Operator can switch to "automatic mode"
+	    #OS_PermLog.%X1 := NOT #ManAct.Value;   //1 = Operator can switch to "manual mode"
+	    #OS_PermLog.%X2 := NOT #LocalAct.Value;   //1 = Operator can switch to "local mode"
+	    #OS_PermLog.%X3 := NOT #OosAct.Value;   //1 = Operator can switch to "out to service mode"
+	END_REGION
+	
+	
+	// сбрасываем команды из HMI
+	#StartMan := false;
+	#StopMan := false;
+	#RstOp := false;
+	#RapidStp := false;
+	
+	
+	// для следующего цикла
+	#stat.prev.StartAut := #StartAut.%X7;
+	#stat.prev.StopAut := #StopAut.%X7;
+	#stat.prev.Start := #tempStart;
+	IF #stat.P_Start_Act > 0 THEN
+	    #stat.P_Start_Act := #stat.P_Start_Act - #stat.SampleTime;
+	END_IF;
+	IF #stat.P_Stop_Act > 0 THEN
+	    #stat.P_Stop_Act := #stat.P_Stop_Act - #stat.SampleTime;
+	END_IF;
+	
+	
+	// аварии
+	#Msg1();
+	
+	#msgTrip(signal := NOT #Trip.%X7,
+	         msgWithAck := false,
+	         msgRank := 1);
+	// #Msgs := "DG_MsgCollect"(maxIndex := 0,
+	//                          msg0 := #msgTrip.msg,
+	//                          msg1 := #temp.nullMsg,
+	//                          msg2 := #temp.nullMsg,
+	//                          msg3 := #temp.nullMsg,
+	//                          msg4 := #temp.nullMsg,
+	//                          msg5 := #temp.nullMsg,
+	//                          msg6 := #temp.nullMsg,
+	//                          msg7 := #temp.nullMsg,
+	//                          msg8 := #temp.nullMsg,
+	//                          msg9 := #temp.nullMsg,
+	//                          msg10 := #temp.nullMsg,
+	//                          msg11 := #temp.nullMsg,
+	//                          msg12 := #temp.nullMsg,
+	//                          msg13 := #temp.nullMsg,
+	//                          msg14 := #temp.nullMsg,
+	//                          msg15 := #temp.nullMsg);
+END_FUNCTION_BLOCK
+
