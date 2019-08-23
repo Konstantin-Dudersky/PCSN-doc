@@ -1,0 +1,1827 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Konstantin Dudersky
+# This file is distributed under the same license as the PCSN package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PCSN \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-23 21:55+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../docs/Basics ../../docs/Motor APL.rst:4 APL/Basics APL/Functions
+#: Feature.rst:5 Feature/Configurable and blocks.rst:4 blocks/Configurable
+#: blocks/Functions blocks/MotL/MotL.rst:4 blocks/Motor of response the using
+#: valve
+msgid "Contents:"
+msgstr ""
+
+#: ../../docs/Basics APL.rst:2 APL/Basics of
+msgid "Basics of APL"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:2 of response startup the using
+msgid "0 - Set startup characteristics"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Automatic Enable Enabling Feature/0
+#: Feature/1 Feature/17 Feature/21 Feature/4 Reaction Set Setting and automatic
+#: blocks/Configurable bumpless button characteristics.rst:5 dosers.rst:5 for
+#: mode mode.rst:5 motors, of only.rst:5 operator or out response service
+#: startup switch switchover the to using valves,
+msgid "Feature bit"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:7 of response startup the using
+msgid "Number of the Feature bit: 0"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:10 of response startup the using
+msgid "Set startup characteristics"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:12 of response startup the using
+msgid ""
+"With this Feature bit, you set the startup characteristics of the "
+"function \\blocks, for example, for:"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:15 of response startup the using
+msgid "Motors, valves and controllers"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:16 of response startup the using
+msgid "Channel blocks"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:17 of response startup the using
+msgid "Monitoring blocks, e.g. MonAnL and MonDiL."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:18 of response startup the using
+msgid "Mathematical and analog logic blocks"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:19 of response startup the using
+msgid "The OpAnL, OpAnS, OpDi01, and OpDi03 block"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:20 of response startup the using
+msgid "The TimeTrg block"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:21 of response startup the using
+msgid "Counter blocks"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:22 of response startup the using
+msgid "The Average block"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:23 of response startup the using
+msgid "The TimeTrig block"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:24 of response startup the using
+msgid "The Trigger block"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Feature/1 Reaction Set
+#: blocks/Configurable characteristics.rst:26 mode.rst:14 of out response
+#: service startup the to using
+msgid "The default setting is 0."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:29 of response startup the using
+msgid ""
+"This Feature bit has no function in the \"Out of service\" operating "
+"mode. The process tag remains in the \"Out of service\" operating mode "
+"after a warm restart of the CPU."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:32 of response startup the using
+msgid ""
+"The message classes Alarm, Warning and Tolerance are not valid for user-"
+"configured message classes. Please take into consideration the validity "
+"of terms for user-configured message classes."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:35 of response startup the using
+msgid ""
+"With a Run-Stop-Run transition of the CPU and internally pending "
+"messages, non-stuck-through messages with time stamps and auxiliary "
+"values beginning with RunUpCycle occur for blocks with the startup "
+"characteristic Feature bit  = 0 after expiration of the RunUpCycle "
+"counter in the following cases:"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:37 of response startup the using
+msgid ""
+"Alarm, warning or tolerance messages from the operating points (motor, "
+"valve, dosing, controller and analog monitoring blocks)"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:38 of response startup the using
+msgid "Feedback errors (motor and valve blocks)"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:39 of response startup the using
+msgid "Output signals of digital process tags (MonDiL, MonDi08)"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:40 of response startup the using
+msgid "Flutter limits violated (MonDiL)"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:42 of response startup the using
+msgid ""
+"The restart routines of the blocks reset the following outputs in OB100: "
+"- Operating point outputs xx_AH_Act, xx_AL_Act, xx_WH_Act, xx_WL_Act, "
+"xx_TH_Act, xx_TL_Act or GradHUpAct, GradHDnAct, GradLAct - Feedback error"
+" outputs MonDynErr and MonStaErr - Output binary signals Out, Out1..8 for"
+" MonDiL or MonDi08 - Flutter suppression FlutAct for MonDiL"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:48 of response startup the using
+msgid ""
+"This causes an outgoing message when initializing Alarm8_P in OB100 and "
+"an incoming message after expiration of the RunUpCycle counter on the "
+"cyclic interrupt level."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:52 of response startup the using
+msgid ""
+"During a complete download with AS stop, the blocks (with Feature.Bit0 = "
+"1) cannot resume operation in their previous mode and control when "
+"restarted."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:55 of response startup the using
+msgid "Set startup characteristics for motors, valves and controllers"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:57 of response startup the using
+msgid ""
+"**Bit = 0**: Starting the block in manual mode and in neutral position. "
+"With controllers, the setpoint is set to (SP_Int) internally. See also "
+"the section Neutral position for motors, valves and controllers for more "
+"on this."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:59 of response startup the using
+msgid ""
+"The controller blocks PIDConL, PIDConS, PIDConR, PIDStepL, ModPreCon, "
+"MPC10x10, and the valve block VlvAnL have the additional Feature bit 16, "
+"Neutral position manipulated variable takes effect at startup, which "
+"specifies whether the neutral position is approached"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:61 of response startup the using
+msgid ""
+"**Bit = 1**: Starting the block with the last stored values, in other "
+"words in the last operating mode set (manual, automatic or local mode) "
+"and at the last valid position."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:64 of response startup the using
+msgid "Special note following complete download to the CPU"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:66 of response startup the using
+msgid ""
+"Following a complete download to the CPU, the motor protection signal "
+"Trip is evaluated during the initial run as good (=1)."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:68 of response startup the using
+msgid ""
+"When a motor protection signal is pending, this causes a non-struck-"
+"through message with time stamp and auxiliary values beginning with "
+"RunUpCycle after the complete download and after expiration of the "
+"RunUpCycle counter."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:71 of response startup the using
+msgid "Startup characteristics for the ShrdResS block"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:73 of response startup the using
+msgid "**Bit = 0**: The output command interface is reset to 0."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:75 of response startup the using
+msgid "**Bit = 1**: The block leaves the output command interface unchanged."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:79 of response startup the using
+msgid "Defining the startup characteristics for channel blocks"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:81 of response startup the using
+msgid ""
+"**Bit = 0**: The channel block uses either the process value PV_In or the"
+" value of SimPV_In as the startup value, depending on the setting of the "
+"input parameter SimOn (PV_In = PV_Out or SimPV_In = PV_Out)."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:83 of response startup the using
+msgid ""
+"**Bit = 1**: The channel block uses the value StartVal as the startup "
+"value (StartVal = PV_Out)."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:87 of response startup the using
+msgid "Defining the startup characteristics for monitoring blocks"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:89 of response startup the using
+msgid "**Bit = 0**: The most recently stored values are reset on startup."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:91 of response startup the using
+msgid ""
+"**Bit = 1**: The most recently used value at the output parameter Out is "
+"output on startup."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:95 of response startup the using
+msgid "Defining the startup characteristics for mathematical, analog logic blocks"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:96 of response startup the using
+msgid "**Bit = 0**: The Out output parameter is reset to 0 on startup."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:98 characteristics.rst:105 of response startup the using
+msgid ""
+"**Bit = 1**: The most recently saved value is output at the Out output "
+"parameter on startup."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:102 of response startup the using
+msgid "Defining startup characteristics for the OpAnL/OpAnS blocks"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:103 of response startup the using
+msgid "**Bit = 0**: The internal setpoint is used for startup."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:109 of response startup the using
+msgid "Defining startup characteristics for the OpDi01/OpDi03 blocks"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:110 of response startup the using
+msgid ""
+"**Bit = 0**: The output parameters Out or Out1...Out3 will be reset on "
+"startup."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:112 of response startup the using
+msgid ""
+"**Bit = 1**: The most recently used value at the output parameter Out or "
+"Out1...Out3 is outputted on startup."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:116 of response startup the using
+msgid "Defining the startup characteristics for counter blocks"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:117 of response startup the using
+msgid ""
+"**Bit = 0**: On startup, the counter is stopped and reset to the value "
+"specified in the input parameter."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:119 of response startup the using
+msgid ""
+"**Bit = 1**: On startup, counting continues with the most recently stored"
+" value."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:121 of response startup the using
+msgid ""
+"Input parameters for the startup characteristics of the counter blocks: -"
+" Block CountOh: Input parameter PresetTime - Block CountScL: Input "
+"parameter PresetVal - Block TotalL: Input parameter PresetVal"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:126 of response startup the using
+msgid ""
+"Messages can be suppressed for a short time after startup. You can set "
+"the number of cycles using the input parameter RunUpCyc."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:129 of response startup the using
+msgid ""
+"Advanced configuration of the startup characteristics for the counter "
+"blocks"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:131 of response startup the using
+msgid ""
+"Note that you can further affect the startup characteristics via the "
+"Feature Bit 5 as a function of this Feature Bits 0. Refer to the section:"
+" Use the last value following a complete download as the current value "
+"during startup of the block."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:135 of response startup the using
+msgid "Defining startup characteristics for the Average block"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:137 of response startup the using
+msgid ""
+"**Bit = 0**: At startup, averaging begins with the value that is "
+"currently at the input parameter (Out = In, NumCycles = 1)."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:139 of response startup the using
+msgid ""
+"**Bit = 1**: When starting-up, the last Out and NumCycles values saved "
+"are used as the last value for averaging (Out ≠ In)."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:143 of response startup the using
+msgid "Defining startup characteristics for the TimeTrig block"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:145 of response startup the using
+msgid ""
+"**Bit 0 = 0**: Periodic trigger and single trigger can be shut off. The "
+"trigger pulse Trigger is reset."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:147 of response startup the using
+msgid ""
+"**Bit 0 = 1**: The activation of the periodic trigger and single trigger "
+"as well as the single trigger point are retained."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
+#: characteristics.rst:149 of response startup the using
+msgid ""
+"The InPerTrigOn, InSglTrigOn and InSglTrigDT inputs are applied for this."
+" If you want to use the reset for a complete download, you must read back"
+" the marked parameters in addition to the operated and monitored "
+"parameters before a complete download."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/1 Reaction blocks/Configurable
+#: mode.rst:2 of out response service the to using
+msgid "1 - Reaction to the out of service mode"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/1 Reaction blocks/Configurable
+#: mode.rst:7 of out response service the to using
+msgid "Number of the Feature bit: 1"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/1 Reaction blocks/Configurable
+#: mode.rst:10 of out response service the to using
+msgid "Reaction to the out of service mode"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/1 Reaction blocks/Configurable
+#: mode.rst:12 of out response service the to using
+msgid ""
+"You can use this Feature bit to define the reaction of the technologic "
+"block based on the interconnectable input parameter OosLi = 1."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/1 Reaction blocks/Configurable
+#: mode.rst:16 of out response service the to using
+msgid ""
+"**Bit = 0**: The symbol for the \"In progress\" status (see below) "
+"appears in the block icon and in the faceplate of the assigned "
+"technologic block. A 0-1 edge transition at the input parameter OosLi has"
+" no further influence on the reaction of the technological block; the "
+"previous status is retained. No switch to the \"Out of service\" mode is "
+"performed."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/1 Reaction blocks/Configurable
+#: mode.rst:18 of out response service the to using
+msgid ""
+"**Bit = 1**: The mode switches to \"Out of service\" assuming that the "
+"block is \"On\" or \"Manual\" mode. If this is not the case, the mode "
+"does not change. The symbol for the \"In progress\" (see below) status "
+"also appears in the block icon and in the faceplate of the assigned "
+"technologic block regardless of the mode change. No message is output to "
+"indicate whether or not the mode change took place."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/1 Reaction blocks/Configurable
+#: mode.rst:20 of out response service the to using
+msgid "The status display for \"In progress\" appears as follows:"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/1 Reaction blocks/Configurable
+#: mode.rst:22 of out response service the to using
+msgid ""
+"A 1-0 edge transition at the input parameter OosLi has no influence on "
+"the reaction of the technologic block, the previous status is retained."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/1 Reaction blocks/Configurable
+#: mode.rst:24 of out response service the to using
+msgid "See also the section Release for maintenance for more on this."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Enabling Feature/17 and automatic
+#: blocks/Configurable bumpless dosers.rst:2 for mode motors, of response
+#: switchover the to using valves,
+msgid ""
+"17 - Enabling bumpless switchover to automatic mode for valves, motors, "
+"and dosers"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Enabling Feature/17 and automatic
+#: blocks/Configurable bumpless dosers.rst:6 for mode motors, of response
+#: switchover the to using valves,
+msgid "Number of the Feature bit: 17"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Enabling Feature/17 and automatic
+#: blocks/Configurable bumpless dosers.rst:9 for mode motors, of response
+#: switchover the to using valves,
+msgid "Bumpless switchover"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Enabling Feature/17 and automatic
+#: blocks/Configurable bumpless dosers.rst:10 for mode motors, of response
+#: switchover the to using valves,
+msgid ""
+"You can use this Feature bit to enable the bumpless switchover from "
+"local/manual mode to automatic mode."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Enabling Feature/17 and automatic
+#: blocks/Configurable bumpless dosers.rst:12 for mode motors, of response
+#: switchover the to using valves,
+msgid "Default setting is 0"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Enabling Feature/17 and automatic
+#: blocks/Configurable bumpless dosers.rst:14 for mode motors, of response
+#: switchover the to using valves,
+msgid ""
+"**Bit = 0**: Bumpless switchover is disabled. You can switch from "
+"local/manual mode to automatic mode at any time."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Enabling Feature/17 and automatic
+#: blocks/Configurable bumpless dosers.rst:16 for mode motors, of response
+#: switchover the to using valves,
+msgid ""
+"**Bit = 1**: Bumpless switchover from local/manual mode to automatic mode"
+" is enabled. A switchover from local/manual mode to automatic mode is "
+"only possible if the control settings of the local/manual mode and "
+"automatic modes match. If switchover occurs at a different point in time,"
+" this is indicated in the faceplate with the text \"Switchover error\"."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Enabling Feature/17 and automatic
+#: blocks/Configurable bumpless dosers.rst:18 for mode motors, of response
+#: switchover the to using valves,
+msgid ""
+"Refer to the Manual and automatic mode for motors, valves and dosers "
+"section for more on this."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Enabling Feature/17 and automatic
+#: blocks/Configurable bumpless dosers.rst:20 for mode motors, of response
+#: switchover the to using valves,
+msgid ""
+"A second feature bit is used to specify if bumpless switchover to "
+"automatic mode is only possible via the faceplate or if switching is also"
+" possible via the interconnectable parameters AutModLi and ManModLi "
+"(ModLiOp = 1)."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Enabling Feature/17 and automatic
+#: blocks/Configurable bumpless dosers.rst:22 for mode motors, of response
+#: switchover the to using valves,
+msgid ""
+"Refer to the section :doc:`21 - Enable bumpless switchover to Automatic "
+"mode for operator only`."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Automatic Enable Feature/21
+#: blocks/Configurable bumpless for mode of only.rst:2 operator response
+#: switchover the to using
+msgid "21 - Enable bumpless switchover to Automatic mode for operator only"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Automatic Enable Feature/21
+#: blocks/Configurable bumpless for mode of only.rst:6 operator response
+#: switchover the to using
+msgid "Number of the Feature bit: 21"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Automatic Enable Feature/21
+#: blocks/Configurable bumpless for mode of only.rst:9 operator response
+#: switchover the to using
+msgid "Enable bumpless switchover to automatic mode for operator only"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Automatic Enable Feature/21
+#: blocks/Configurable bumpless for mode of only.rst:11 operator response
+#: switchover the to using
+msgid ""
+"You can use this Feature bit to specify whether bumpless switchover to "
+"automatic mode for valves, motors and dosing unit should be enabled only "
+"if switching via the faceplate is in effect, or whether switching using "
+"interconnectable inputs AutModLi and ManModLi (ModLiOp = 1) is also "
+"possible."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Automatic Enable Feature/21
+#: blocks/Configurable bumpless for mode of only.rst:13 operator response
+#: switchover the to using
+msgid "The default setting is 0"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Automatic Enable Feature/21
+#: blocks/Configurable bumpless for mode of only.rst:15 operator response
+#: switchover the to using
+msgid ""
+"**Bit = 0**: The function \"Bumpless switchover to automatic mode for "
+"valves, motors and dosers\" works when switching via the faceplate and "
+"switching using interconnectable inputs AutModLi and ManModLi (ModLiOp = "
+"1)."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Automatic Enable Feature/21
+#: blocks/Configurable bumpless for mode of only.rst:17 operator response
+#: switchover the to using
+msgid ""
+"**Bit = 1**: The \"Bumpless switchover in automatic mode for valves, "
+"motors and dosers\" function only works for switching via the faceplate. "
+"Bumping switchover can be activated via the inputs AutModLi and ManModLi "
+"(ModLiOp = 1)."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:2 of or response switch the using
+msgid "4 - Setting switch or button mode"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:7 of or response switch the using
+msgid "Number of the Feature bit: 4"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:11 of or response switch the using
+msgid ""
+"Setting switch or button mode (input signal as pulse signal or as static "
+"signal)"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:13 of or response switch the using
+msgid ""
+"You can use this Feature bit to determine whether a separate "
+"interconnectable 1-active control input has to be used for every "
+"automatic command of the block or two automatic commands are assigned to "
+"a control input."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:15 of or response switch the using
+msgid "The Feature bit affects the following control inputs:"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:17 of or response switch the using
+msgid "starting and stopping a motor"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:18 of or response switch the using
+msgid "Opening and closing a valve"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:19 of or response switch the using
+msgid "switching modes (parameters AutModLi and ManModLi)"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:20 of or response switch the using
+msgid ""
+"Setpoint specification internal and external (parametersSP_ExtLi and "
+"SP_IntLi)"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:22 of or response switch the using
+msgid ""
+"is given in the form of a pulse (pushbutton operation) or a static signal"
+" (switching mode)."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:24 of or response switch the using
+msgid ""
+"You can find the commands for controlling the block in the relevant "
+"section on block operating modes. They are always the parameters that are"
+" used for the automatic operation of a block."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:26 of or response switch the using
+msgid ""
+"**Bit = 0**: Button mode: Each automatic command is assigned to a control"
+" input. This has a latching reaction and is 1-active."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:28 mode.rst:38 of or response switch the using
+msgid ""
+"**Example with a motor MotRevL** : In this case, use the interconnectable"
+" input parameters."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:30 mode.rst:40 of or response switch the using
+msgid "FwdAut = 1 for the command \"Start forward\""
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:31 of or response switch the using
+msgid "RevAut = 1 for the command \"Start backwards\""
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:32 of or response switch the using
+msgid "StopAut = 1 for the stop command and"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:33 mode.rst:43 of or response switch the using
+msgid "AutModLi = 1 for setting \"Automatic\" operating mode"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:34 of or response switch the using
+msgid "ManModLi = 1 for setting \"Manual\" operating mode"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:36 of or response switch the using
+msgid ""
+"**Bit = 1**: Switching mode: two static automatic commands are assigned "
+"to a control input."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:41 of or response switch the using
+msgid "RevAut = 1 for the command \"Start backwards\" and"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:42 of or response switch the using
+msgid "FwdAut = 0 and RevAut = 0 for the stop command"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:44 of or response switch the using
+msgid "AutModLi = 0 for setting \"Manual\" operating mode"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/4 Setting blocks/Configurable
+#: button mode.rst:46 of or response switch the using
+msgid "The StopAut and ManModLi control inputs are irrelevant in this case."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions Feature.rst:2 Feature/Configurable
+#: blocks/Configurable of response the using
+msgid "Configurable response using the Feature"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks.rst:2 blocks/Functions of the
+msgid "Functions of the blocks"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL.rst:2 valve
+msgid "MotL - двигатель"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL code original.rst:2 valve
+msgid "MotL код оригинального блока PCS"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL messaging.rst:2 valve
+msgid "MotL сообщения"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL messaging.rst:4 valve
+msgid "Сообщения"
+msgstr ""
+
+#: ../../docs/Motor ../../docs/Аварии/Аварии.rst:7
+#: ../../docs/Цвета/Цвета.rst:11 and blocks/MotL/MotL messaging.rst:7 valve
+msgid "Номер"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL messaging.rst:8 valve
+msgid "Класс"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL messaging.rst:9 valve
+msgid "Сообщение (англ.)"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL messaging.rst:10 valve
+msgid "Сообщение (рус.)"
+msgstr ""
+
+#: ../../docs/Motor ../../docs/Аварии/Аварии.rst:12 and blocks/MotL/MotL
+#: messaging.rst:11 valve
+msgid "1"
+msgstr ""
+
+#: ../../docs/Motor ../../docs/Аварии/Аварии.rst:42 and blocks/MotL/MotL
+#: messaging.rst:12 messaging.rst:16 messaging.rst:20 valve
+msgid "7"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL messaging.rst:13 valve
+msgid "Motor feedback error"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL messaging.rst:14 valve
+msgid "Ошибка отклика двигателя"
+msgstr ""
+
+#: ../../docs/Motor ../../docs/Аварии/Аварии.rst:17 and blocks/MotL/MotL
+#: messaging.rst:15 valve
+msgid "2"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL messaging.rst:17 valve
+msgid "Motor protection triggered"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL messaging.rst:18 valve
+msgid "Активация функции защиты двигателя"
+msgstr ""
+
+#: ../../docs/Motor ../../docs/Аварии/Аварии.rst:22 and blocks/MotL/MotL
+#: messaging.rst:19 valve
+msgid "3"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL messaging.rst:21 valve
+msgid "External error has occured"
+msgstr ""
+
+#: ../../docs/Motor and blocks/MotL/MotL messaging.rst:22 valve
+msgid "Внешняя ошибка"
+msgstr ""
+
+#: ../../docs/Motor and blocks.rst:2 blocks/Motor valve
+msgid "Блоки двигателей и клапанов"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:2
+msgid "Аварии"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:4 ../../docs/Цвета/Цвета.rst:2
+#: ../../docs/Цвета/Цвета.rst:8
+msgid "Цвета"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:10
+msgid "Класс (англ.)"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:11
+msgid "Класс (рус.)"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:15
+msgid "Alarm – high"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:16
+msgid "Аварийное превышение"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:20
+msgid "Alarm – low"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:21
+msgid "Аварийное принижение"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:25
+msgid "Warning – high"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:26
+msgid "Предупредительное превышение"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:27
+msgid "4"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:30
+msgid "Warning – low"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:31
+msgid "Предупредительное принижение"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:32
+msgid "5"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:35
+msgid "Tolerance – high"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:36
+msgid "Превышение допуска"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:37
+msgid "6"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:40
+msgid "Tolerance – low"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:41
+msgid "Принижение допуска"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:45
+msgid "PLC process control message – Failure"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:46
+msgid "Сообщения ПЛК – сбой"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:47
+msgid "8"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:50
+msgid "PLC process control message – Error"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:51
+msgid "Сообщения ПЛК – ошибки"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:52
+msgid "9"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:55
+msgid "OS process control system message – Failure"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:56
+msgid "Системные сообщения тех. процесса от ОС – сбой"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:57
+msgid "10"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:60
+msgid "OS process control system message – Error"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:61
+msgid "Системные сообщения тех. процесса от ОС – ошибки"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:62
+msgid "11"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:65
+msgid "OS Process Control Message – Batch"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:66
+msgid "Системные сообщения тех. процесса от ОС – партия"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:67
+msgid "12"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:70
+msgid "Preventive maintenance – Maintenance"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:71
+msgid "Профилактическое обслуживание"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:72
+msgid "13"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:75
+msgid "Process Message – With Ack"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:76
+msgid "Сообщение процесса"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:77
+msgid "14"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:80
+msgid "Operational Message – Without Ack"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:81
+msgid "Рабочее сообщение"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:82
+msgid "15"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:85
+msgid "Operator prompt – Standard"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:86
+msgid "Запрос оператору"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:87
+msgid "16"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:90
+msgid "Operating Message – Standard"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:91
+msgid "Сообщение о действии оператора"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:92
+msgid "17"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:95
+msgid "Status Message – PLC"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:96
+msgid "Сообщение статуса  - статус ПЛК"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:97
+msgid "18"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:100
+msgid "Status Message – OS"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:101
+msgid "Сообщение статуса – статус ОС"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:102
+msgid "19"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:105
+msgid "Process control system – with ack"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:106
+msgid "Система управления процессом (с квитированием)"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:107
+msgid "20"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:110
+msgid "System messages – with ack"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:111
+msgid "Системные сообщения"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:112
+msgid "21"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:115
+msgid "Process control system – without ack"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:116
+msgid "Система управления процессом (без квитирования)"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:117
+msgid "22"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:120
+msgid "Operator input messages – without ack"
+msgstr ""
+
+#: ../../docs/Аварии/Аварии.rst:121
+msgid "Сообщения от оператора"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:12
+msgid "Пример"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:13
+msgid "Цвет"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:14
+msgid "Элемент"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:15
+msgid "Описание"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:16
+msgid "281"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:18
+msgid "175, 175, 175"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:19 ../../docs/Цвета/Цвета.rst:24
+#: ../../docs/Цвета/Цвета.rst:29 ../../docs/Цвета/Цвета.rst:34
+#: ../../docs/Цвета/Цвета.rst:39 ../../docs/Цвета/Цвета.rst:44
+msgid "Кнопки"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:20 ../../docs/Цвета/Цвета.rst:25
+#: ../../docs/Цвета/Цвета.rst:180 ../../docs/Цвета/Цвета.rst:195
+#: ../../docs/Цвета/Цвета.rst:210 ../../docs/Цвета/Цвета.rst:240
+#: ../../docs/Цвета/Цвета.rst:260 ../../docs/Цвета/Цвета.rst:275
+#: ../../docs/Цвета/Цвета.rst:290 ../../docs/Цвета/Цвета.rst:690
+msgid "BackColor"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:21
+msgid "282"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:23 ../../docs/Цвета/Цвета.rst:183
+#: ../../docs/Цвета/Цвета.rst:243
+msgid "206, 206, 206"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:26
+msgid "283"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:28 ../../docs/Цвета/Цвета.rst:38
+#: ../../docs/Цвета/Цвета.rst:698
+msgid "128, 128, 128"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:30 ../../docs/Цвета/Цвета.rst:700
+msgid "BorderColor"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:31
+msgid "284"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:33 ../../docs/Цвета/Цвета.rst:178
+#: ../../docs/Цвета/Цвета.rst:203 ../../docs/Цвета/Цвета.rst:258
+#: ../../docs/Цвета/Цвета.rst:283
+msgid "255, 255, 255"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:35
+msgid "BackColorTop"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:36
+msgid "285"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:40
+msgid "BackColorBottom"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:41
+msgid "286"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:43 ../../docs/Цвета/Цвета.rst:188
+#: ../../docs/Цвета/Цвета.rst:218 ../../docs/Цвета/Цвета.rst:248
+#: ../../docs/Цвета/Цвета.rst:268 ../../docs/Цвета/Цвета.rst:298
+msgid "0, 0, 0"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:45 ../../docs/Цвета/Цвета.rst:190
+#: ../../docs/Цвета/Цвета.rst:205 ../../docs/Цвета/Цвета.rst:220
+#: ../../docs/Цвета/Цвета.rst:250 ../../docs/Цвета/Цвета.rst:270
+#: ../../docs/Цвета/Цвета.rst:285 ../../docs/Цвета/Цвета.rst:300
+msgid "FontColor"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:46
+msgid "287"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:51
+msgid "288"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:56
+msgid "289"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:61
+msgid "290"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:66
+msgid "291"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:71
+msgid "292"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:76
+msgid "293"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:81
+msgid "294"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:86
+msgid "295"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:91
+msgid "296"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:96
+msgid "297"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:101
+msgid "298"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:106
+msgid "299"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:111
+msgid "300"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:116
+msgid "301"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:121
+msgid "302"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:126
+msgid "303"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:131
+msgid "304"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:136
+msgid "305"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:141
+msgid "306"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:146
+msgid "307"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:151
+msgid "308"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:156
+msgid "309"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:161
+msgid "310"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:166
+msgid "311"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:171
+msgid "312"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:176
+msgid "313"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:179 ../../docs/Цвета/Цвета.rst:184
+#: ../../docs/Цвета/Цвета.rst:189
+msgid "APL_MULTI_TEXT - светло-серый (ручной)"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:181
+msgid "314"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:185 ../../docs/Цвета/Цвета.rst:200
+#: ../../docs/Цвета/Цвета.rst:215 ../../docs/Цвета/Цвета.rst:245
+#: ../../docs/Цвета/Цвета.rst:265 ../../docs/Цвета/Цвета.rst:280
+#: ../../docs/Цвета/Цвета.rst:295 ../../docs/Цвета/Цвета.rst:695
+msgid "FillColor"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:186
+msgid "315"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:191
+msgid "316"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:193 ../../docs/Цвета/Цвета.rst:278
+msgid "0, 255, 0"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:194 ../../docs/Цвета/Цвета.rst:199
+#: ../../docs/Цвета/Цвета.rst:204
+msgid "APL_MULTI_TEXT - зеленый (автоматический)"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:196
+msgid "317"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:198
+msgid "0, 133, 0"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:201
+msgid "318"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:206
+msgid "319"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:208
+msgid "0, 206, 202"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:209 ../../docs/Цвета/Цвета.rst:214
+#: ../../docs/Цвета/Цвета.rst:219
+msgid "APL_MULTI_TEXT - голубой (местный)"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:211
+msgid "320"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:213
+msgid "0, 255, 220"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:216
+msgid "321"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:221
+msgid "322"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:226
+msgid "323"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:231
+msgid "324"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:236
+msgid "325"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:238
+msgid "145, 145, 145"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:239 ../../docs/Цвета/Цвета.rst:244
+#: ../../docs/Цвета/Цвета.rst:249
+msgid "APL_MULTI_TEXT - темно-серый (не работает)"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:241
+msgid "326"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:246
+msgid "327"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:251
+msgid "328"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:256
+msgid "329"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:259 ../../docs/Цвета/Цвета.rst:264
+#: ../../docs/Цвета/Цвета.rst:269
+msgid "APL_MULTI_TEXT - серый (Стоп)"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:261
+msgid "330"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:263
+msgid "218, 218, 218"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:266
+msgid "331"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:271
+msgid "332"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:273
+msgid "0, 181, 0"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:274 ../../docs/Цвета/Цвета.rst:279
+#: ../../docs/Цвета/Цвета.rst:284
+msgid "APL_MULTI_TEXT - зеленый (Пуск)"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:276
+msgid "333"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:281
+msgid "334"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:286
+msgid "335"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:288
+msgid "255, 0, 0"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:289 ../../docs/Цвета/Цвета.rst:294
+#: ../../docs/Цвета/Цвета.rst:299
+msgid "APL_MULTI_TEXT - красный (Экстрен. стоп)"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:291
+msgid "336"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:293
+msgid "255, 130, 150"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:296
+msgid "337"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:301
+msgid "338"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:306
+msgid "339"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:311
+msgid "340"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:316
+msgid "341"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:321
+msgid "342"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:326
+msgid "343"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:331
+msgid "344"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:336
+msgid "345"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:341
+msgid "346"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:346
+msgid "347"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:351
+msgid "348"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:356
+msgid "349"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:361
+msgid "350"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:366
+msgid "351"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:371
+msgid "352"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:376
+msgid "353"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:381
+msgid "354"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:386
+msgid "355"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:391
+msgid "356"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:396
+msgid "357"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:401
+msgid "358"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:406
+msgid "359"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:411
+msgid "360"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:416
+msgid "361"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:421
+msgid "362"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:426
+msgid "363"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:431
+msgid "364"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:436
+msgid "365"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:441
+msgid "366"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:446
+msgid "367"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:451
+msgid "368"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:456
+msgid "369"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:461
+msgid "370"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:466
+msgid "371"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:471
+msgid "372"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:476
+msgid "373"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:481
+msgid "374"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:486
+msgid "375"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:491
+msgid "376"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:496
+msgid "377"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:501
+msgid "378"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:506
+msgid "379"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:511
+msgid "380"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:516
+msgid "381"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:521
+msgid "382"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:526
+msgid "383"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:531
+msgid "384"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:536
+msgid "385"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:541
+msgid "386"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:546
+msgid "387"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:551
+msgid "388"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:556
+msgid "389"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:561
+msgid "390"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:566
+msgid "391"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:571
+msgid "392"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:576
+msgid "393"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:581
+msgid "394"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:586
+msgid "395"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:591
+msgid "396"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:596
+msgid "397"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:601
+msgid "398"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:606
+msgid "399"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:611
+msgid "400"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:616
+msgid "401"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:621
+msgid "402"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:626
+msgid "403"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:631
+msgid "404"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:636
+msgid "405"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:641 ../../docs/Цвета/Цвета.rst:651
+msgid "406"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:646 ../../docs/Цвета/Цвета.rst:656
+msgid "407"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:661
+msgid "408"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:666
+msgid "409"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:671
+msgid "410"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:676
+msgid "411"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:681
+msgid "412"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:686
+msgid "413"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:688
+msgid "98, 172, 170"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:689 ../../docs/Цвета/Цвета.rst:694
+#: ../../docs/Цвета/Цвета.rst:699
+msgid "rect_selectionBorder"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:691
+msgid "414"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:693
+msgid "177, 207, 205"
+msgstr ""
+
+#: ../../docs/Цвета/Цвета.rst:696
+msgid "415"
+msgstr ""
+
