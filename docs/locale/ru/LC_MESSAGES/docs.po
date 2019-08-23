@@ -39,7 +39,7 @@ msgstr ""
 #: mode mode.rst:5 motors, of only.rst:5 operator or out response service
 #: startup switch switchover the to using valves,
 msgid "Feature bit"
-msgstr ""
+msgstr "Феатуре бит"
 
 #: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
 #: characteristics.rst:7 of response startup the using
