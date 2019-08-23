@@ -72,7 +72,8 @@ latex_engine = 'xelatex'
 # команды:
 
 # генерация переводов:
-# sphinx-build -b gettext . _build/gettext
+# sphinx-intl update -p _build/gettext -l ru
 
 # собрать html с переводом: 
 # sphinx-build -b html -D language=ru . _build/html/ru
+# sphinx-build -b html -D language=en . _build/html/en

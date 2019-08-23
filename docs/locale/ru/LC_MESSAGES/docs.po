@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCSN \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-23 21:55+0300\n"
+"POT-Creation-Date: 2019-08-23 22:52+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 
 #: ../../docs/Basics ../../docs/Motor APL.rst:4 APL/Basics APL/Functions
 #: Feature.rst:5 Feature/Configurable and blocks.rst:4 blocks/Configurable
-#: blocks/Functions blocks/MotL/MotL.rst:4 blocks/Motor of response the using
-#: valve
+#: blocks/Functions blocks/MotL/MotL.rst:4 blocks/Motor blocks/Operating modes
+#: of response the using valve
 msgid "Contents:"
 msgstr ""
 
@@ -39,17 +39,17 @@ msgstr ""
 #: mode mode.rst:5 motors, of only.rst:5 operator or out response service
 #: startup switch switchover the to using valves,
 msgid "Feature bit"
-msgstr "Феатуре бит"
+msgstr "Feature бит"
 
 #: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
 #: characteristics.rst:7 of response startup the using
 msgid "Number of the Feature bit: 0"
-msgstr ""
+msgstr "Номер Feature бита: 0"
 
 #: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
 #: characteristics.rst:10 of response startup the using
 msgid "Set startup characteristics"
-msgstr ""
+msgstr "Установить стартовые характеристики"
 
 #: - ../../docs/Basics APL/Functions Feature/0 Set blocks/Configurable
 #: characteristics.rst:12 of response startup the using
@@ -773,6 +773,401 @@ msgstr ""
 msgid "Functions of the blocks"
 msgstr ""
 
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:2
+#: modes of the
+msgid "Local mode"
+msgstr "Местный режим"
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:5
+#: modes of the
+msgid "Areas of application for local mode"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:7
+#: modes of the
+msgid ""
+"This operating mode is used for motors, valves and dosing units. The "
+"control settings are made directly or via a control station that is "
+"located \"locally\". In addition, you can set different control "
+"strategies with the parameter LocalSetting."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:9
+#: modes of the
+msgid "With LocalSetting = 0, you prevent a change to \"local mode\"."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:12
+#: modes of the
+msgid "Differences between \"Large\" and \"Small\" blocks"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:14
+#: modes of the
+msgid ""
+"The operating mode described here is valid for \"Large\" blocks. For "
+"\"Small\" blocks, LocalSetting can be configured only on a limited basis."
+" For more information, refer to the respective description for the "
+"operating modes of the blocks."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:18
+#: modes of the
+msgid "Changing to local mode"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:20
+#: modes of the
+msgid ""
+"Changing to local mode is only possible from the manual and automatic "
+"operating modes. The change to this mode is initiated by:"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:22
+#: modes of the
+msgid ""
+"An operation on the faceplate (input parameter LocalOp = 1, valid if "
+"LocalSetting = 3 or LocalSetting = 4 and ModLiOp = 0) or"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:23
+#: modes of the
+msgid ""
+"The interconnected input parameter (LocalLi = 1, valid if LocalSetting = "
+"1 or LocalSetting = 2)."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:27
+#: modes of the
+msgid "Exiting local mode"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:29
+#: modes of the
+msgid "You leave local mode using:"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:31
+#: modes of the
+msgid ""
+"An operation on the faceplate (LocalSetting = 3 or LocalSetting = 4 and "
+"ModLiOp = 0) or"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:32
+#: modes of the
+msgid "the interconnected input parameter (LocalSetting = 1 or LocalSetting = 2)."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:34
+#: modes of the
+msgid ""
+"In order to exit local mode via the interconnected input parameter, you "
+"can configure various reactions using a Feature bit Exiting local mode."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:38
+#: modes of the
+msgid "Operator input in \"local mode\" using a faceplate"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:40
+#: modes of the
+msgid ""
+"You are not permitted to functionally operate the block in local mode. "
+"You can only use the faceplate to exit local mode if you have also "
+"activated \"local mode\" using the faceplate. The rules you specified for"
+" exiting \"local mode\" apply here."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:44
+#: modes of the
+msgid "Input in \"local mode\" via interconnected inputs"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:46
+#: modes of the
+msgid ""
+"In \"local mode\", the way the block functions is influenced via "
+"interconnected input parameters according to the settings of the "
+"LocalSetting parameter. You have the following options:"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:48
+#: modes of the
+msgid "LocalSetting = 1 and LocalSetting = 3"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:50
+#: modes of the
+msgid ""
+"The control settings for the block are adjusted (tracking) via an "
+"interconnected input parameter. The interconnected input parameter "
+"includes the control signal for the local operator station on the system."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:51
+#: modes of the
+msgid ""
+"The runtime monitoring of the block is effective in accordance with your "
+"configuration."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:52
+#: modes of the
+msgid ""
+"The interlocking functions of the block are activated in accordance with "
+"input parameter BypProt = 0 or deactivated (BypProt = 1)."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:56
+#: modes of the
+msgid "The block VlvAnL does not support LocalSetting = 1/3."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:58
+#: modes of the
+msgid "LocalSetting = 2 and LocalSetting = 4"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:60
+#: modes of the
+msgid ""
+"The control settings for the block are made based on internal adjustment "
+"of the feedback value."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:61
+#: modes of the
+msgid ""
+"Runtime monitoring of the block is active only with rapid stop, external "
+"fault, motor protection, and if both feedback signals are set "
+"(discrepancy)."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:63
+#: modes of the
+msgid "An exception is VlvMotL:"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:67
+#: modes of the
+msgid "**VlvMotL**"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:69
+#: modes of the
+msgid ""
+"The motor and valve feedback signals are monitored if the motor feedback "
+"signlas exist and are connected with FbkOpening and FbkClosing (Feature "
+"bit 12 = 0). The motor feedback signals are only monitored in the end "
+"positions of the valve and in discrepancy. For example, if the valve is "
+"in end position FbkOpen =1 and the motor feedback FbkOpening =1 is "
+"pending, an error message is generated upon expiration of the monitoring "
+"time. If there are no motor feedback signals (Feature bit 12 = 1), "
+"monitoring of the valve and motor feedback signals does not take place."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:72
+#: modes of the
+msgid ""
+"**VlvAnL**: The auxiliary valve is controlled via internal tracking of "
+"the feedback signals FbkAuxVCloseOut and FbkAuxVOpenOut. The control of "
+"the main valve via the feedback value Rbk is not affected by this."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:74
+#: modes of the
+msgid ""
+"The texts for labeling the command buttons in the faceplates of the motor"
+" and valve blocks can now be assigned for each specific instance. The "
+"configuration of the texts is performed with the \"Text 1\" property of "
+"the respective control inputs of the motor and valve blocks in the CFC."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:77
+#: modes of the
+msgid ""
+"If no instance-specific text is configured, the previous default texts "
+"are used and displayed in the faceplate."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:79
+#: modes of the
+msgid ""
+"The following table shows the assignment of the command buttons to the "
+"corresponding block input:"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:81
+#: modes of the
+msgid "The interlock functions of the block are deactivated."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:83
+#: modes of the
+msgid "Overview of behavior in local mode"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:86
+#: modes of the
+msgid "LocalSetting ="
+msgstr "LocalSetting ="
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:87
+#: modes of the
+msgid "0"
+msgstr "0"
+
+#: ../../docs/Basics ../../docs/Motor ../../docs/Аварии/Аварии.rst:12
+#: APL/Functions and blocks/Local blocks/MotL/MotL blocks/Operating
+#: messaging.rst:11 mode.rst:88 modes of the valve
+msgid "1"
+msgstr "1"
+
+#: ../../docs/Basics ../../docs/Motor ../../docs/Аварии/Аварии.rst:17
+#: APL/Functions and blocks/Local blocks/MotL/MotL blocks/Operating
+#: messaging.rst:15 mode.rst:89 modes of the valve
+msgid "2"
+msgstr "2"
+
+#: ../../docs/Basics ../../docs/Motor ../../docs/Аварии/Аварии.rst:22
+#: APL/Functions and blocks/Local blocks/MotL/MotL blocks/Operating
+#: messaging.rst:19 mode.rst:90 modes of the valve
+msgid "3"
+msgstr "3"
+
+#: ../../docs/Basics ../../docs/Аварии/Аварии.rst:27 APL/Functions blocks/Local
+#: blocks/Operating mode.rst:91 modes of the
+msgid "4"
+msgstr "4"
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:92
+#: modes of the
+msgid "5 (VlvS only)"
+msgstr "5 (только VlvS)"
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:93
+#: modes of the
+msgid "Switch on operating mode"
+msgstr "Переключение режима"
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:94
+#: modes of the
+msgid "Cannot be set"
+msgstr "Невозможно"
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:95
+#: mode.rst:96 mode.rst:102 mode.rst:103 mode.rst:106 mode.rst:109 mode.rst:110
+#: mode.rst:113 modes of the
+msgid "CFC/SFC"
+msgstr "Программно"
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:97
+#: mode.rst:98 modes of the
+msgid "Faceplate"
+msgstr "АРМ"
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:99
+#: modes of the
+msgid "CFC"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:100
+#: modes of the
+msgid "Changing the operating mode: Local mode/to manual mode only (Feature = 0)"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:101
+#: mode.rst:104 mode.rst:105 mode.rst:108 mode.rst:111 mode.rst:112
+#: mode.rst:115 mode.rst:120 mode.rst:122 mode.rst:129 mode.rst:136 modes of
+#: the
+msgid "\\-"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:107
+#: modes of the
+msgid "Changing the operating mode: Local mode/previous mode (Feature = 1)"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:114
+#: modes of the
+msgid "Operating in the faceplate"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:116
+#: modes of the
+msgid "Only rapid stop and resetting of rapid stop"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:117
+#: modes of the
+msgid "Only rapid stop and resetting of rapid stop (only for \"Large\" blocks)"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:118
+#: modes of the
+msgid ""
+"Only switching of operating mode, rapid stop, internal/external setpoint "
+"switchover and resetting of rapid stop"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:119
+#: modes of the
+msgid "Only switching of operating mode, rapid stop, and resetting of rapid stop"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:121
+#: modes of the
+msgid "Executing local commands"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:123
+#: mode.rst:125 modes of the
+msgid "Yes"
+msgstr "Да"
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:124
+#: mode.rst:126 mode.rst:127 modes of the
+msgid "No"
+msgstr "Нет"
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:128
+#: modes of the
+msgid "Reaction of the block"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:130
+#: mode.rst:132 mode.rst:134 modes of the
+msgid "Monitoring the feedbacks"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:131
+#: mode.rst:133 modes of the
+msgid ""
+"Tracking of feedback, monitoring feedback during rapid stop, external "
+"errors, motor protection or discrepancy"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:135
+#: modes of the
+msgid "Interlock activated"
+msgstr "Блокировки активны"
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:137
+#: mode.rst:139 modes of the
+msgid "Yes: (BypProt = 0) No: (BypProt = 1)"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:138
+#: mode.rst:140 mode.rst:141 modes of the
+msgid "only at output LockAct with Feature Bit 27 = 1 and BypProt = 0"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks.rst:2 blocks/Operating modes of the
+msgid "Operating modes of the blocks"
+msgstr ""
+
 #: ../../docs/Motor and blocks/MotL/MotL.rst:2 valve
 msgid "MotL - двигатель"
 msgstr ""
@@ -806,11 +1201,6 @@ msgstr ""
 msgid "Сообщение (рус.)"
 msgstr ""
 
-#: ../../docs/Motor ../../docs/Аварии/Аварии.rst:12 and blocks/MotL/MotL
-#: messaging.rst:11 valve
-msgid "1"
-msgstr ""
-
 #: ../../docs/Motor ../../docs/Аварии/Аварии.rst:42 and blocks/MotL/MotL
 #: messaging.rst:12 messaging.rst:16 messaging.rst:20 valve
 msgid "7"
@@ -824,22 +1214,12 @@ msgstr ""
 msgid "Ошибка отклика двигателя"
 msgstr ""
 
-#: ../../docs/Motor ../../docs/Аварии/Аварии.rst:17 and blocks/MotL/MotL
-#: messaging.rst:15 valve
-msgid "2"
-msgstr ""
-
 #: ../../docs/Motor and blocks/MotL/MotL messaging.rst:17 valve
 msgid "Motor protection triggered"
 msgstr ""
 
 #: ../../docs/Motor and blocks/MotL/MotL messaging.rst:18 valve
 msgid "Активация функции защиты двигателя"
-msgstr ""
-
-#: ../../docs/Motor ../../docs/Аварии/Аварии.rst:22 and blocks/MotL/MotL
-#: messaging.rst:19 valve
-msgid "3"
 msgstr ""
 
 #: ../../docs/Motor and blocks/MotL/MotL messaging.rst:21 valve
@@ -893,10 +1273,6 @@ msgstr ""
 
 #: ../../docs/Аварии/Аварии.rst:26
 msgid "Предупредительное превышение"
-msgstr ""
-
-#: ../../docs/Аварии/Аварии.rst:27
-msgid "4"
 msgstr ""
 
 #: ../../docs/Аварии/Аварии.rst:30
