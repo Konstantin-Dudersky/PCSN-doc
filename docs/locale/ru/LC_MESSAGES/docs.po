@@ -7,21 +7,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCSN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-23 22:52+0300\n"
-"PO-Revision-Date: 2019-08-24 00:12+0300\n"
+"POT-Creation-Date: 2019-08-24 20:28+0300\n"
+"PO-Revision-Date: 2019-08-24 21:05+0300\n"
+"Last-Translator: \n"
+"Language: ru\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 "
+"&& (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: ru\n"
 "X-Generator: Poedit 2.2.3\n"
 
-#: ../../docs/Basics ../../docs/Motor APL.rst:4 APL/Basics APL/Functions
-#: Feature.rst:5 Feature/Configurable and blocks.rst:4 blocks/Configurable
-#: blocks/Functions blocks/MotL/MotL.rst:4 blocks/Motor blocks/Operating modes of
-#: response the using valve
+#: - ../../docs/Basics ../../docs/Interlock ../../docs/Motor 16 APL.rst:4
+#: APL/Basics APL/Functions Feature.rst:5 Feature/Configurable Interlock and
+#: blocks.rst:4 blocks.rst:5 blocks/Configurable blocks/Functions blocks/Interlock
+#: blocks/Intlk16 blocks/MotL/MotL.rst:4 blocks/Motor blocks/Operating display
+#: input modes of response signals.rst:4 signals/Intlk16 the using valve with
 msgid "Contents:"
 msgstr ""
 
@@ -35,9 +38,10 @@ msgid "0 - Set startup characteristics"
 msgstr ""
 
 #: - ../../docs/Basics APL/Functions Automatic Enable Enabling Feature/0 Feature/1
-#: Feature/17 Feature/21 Feature/4 Reaction Set Setting and automatic
-#: blocks/Configurable bumpless button characteristics.rst:5 dosers.rst:5 for mode
-#: mode.rst:5 motors, of only.rst:5 operator or out response service startup
+#: Feature/17 Feature/2 Feature/21 Feature/4 Reaction Separate Set Setting and
+#: automatic blocks/Configurable bumpless button characteristics.rst:5
+#: dosers.rst:5 evaluation excluded for interlock mode mode.rst:5 motors, of
+#: only.rst:5 operator or out response service signals.rst:5 simulated startup
 #: switch switchover the to using valves,
 msgid "Feature bit"
 msgstr "Feature бит"
@@ -109,8 +113,9 @@ msgstr ""
 msgid "The Trigger block"
 msgstr ""
 
-#: - ../../docs/Basics APL/Functions Feature/0 Feature/1 Reaction Set
-#: blocks/Configurable characteristics.rst:26 mode.rst:14 of out response service
+#: - ../../docs/Basics APL/Functions Feature/0 Feature/1 Feature/2 Reaction
+#: Separate Set and blocks/Configurable characteristics.rst:26 evaluation excluded
+#: for interlock mode.rst:14 of out response service signals.rst:15 simulated
 #: startup the to using
 msgid "The default setting is 0."
 msgstr ""
@@ -489,6 +494,11 @@ msgstr ""
 msgid "See also the section Release for maintenance for more on this."
 msgstr ""
 
+#: - ../../docs/Basics APL/Functions Exiting Feature/10 blocks/Configurable local
+#: mode.rst:2 of response the using
+msgid "10 - Exiting local mode"
+msgstr "10 - Выход из локального режима"
+
 #: - ../../docs/Basics APL/Functions Enabling Feature/17 and automatic
 #: blocks/Configurable bumpless dosers.rst:2 for mode motors, of response
 #: switchover the to using valves,
@@ -565,6 +575,112 @@ msgstr ""
 msgid ""
 "Refer to the section :doc:`21 - Enable bumpless switchover to Automatic mode "
 "for operator only`."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:2 simulated the using
+msgid "2 - Separate evaluation for excluded and simulated interlock signals"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:7 simulated the using
+msgid "Number of the ``Feature`` bit: 2"
+msgstr "Номер бита ``Feature``: 0"
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:11 simulated the
+#: using
+msgid "Separate evaluation for excluded and simulated interlock signals"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:13 simulated the
+#: using
+msgid ""
+"You can use this Feature bit to set the reaction of the block to an interlock "
+"signal of an interlock block that is excluded or simulated."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:17 simulated the
+#: using
+msgid ""
+"**Bit = 0**: Switch-relevant excluded and simulated interlock signals are "
+"processed with the status 16#60 and are displayed as simulated or excluded, "
+"depending on the interlock status."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:19 simulated the
+#: using
+msgid ""
+"**Bit = 1**: Excluded and simulated interlock signals are evaluated separately. "
+"All excluded interlock signals in a sequence of interlock blocks are displayed "
+"as excluded. Switch-relevant simulated interlock signals are processed with the "
+"status 16#60 and displayed as simulated."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:22 simulated the
+#: using
+msgid ""
+"If the ``Feature`` Bit is enabled, the signal cannot be inverted via CFC during "
+"interconnections at the inputs, as, otherwise, the bypass display would not "
+"update."
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:24 simulated the
+#: using
+msgid "The interlocking inputs of the following blocks are affected:"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:26 simulated the
+#: using
+msgid "**Intlk02 , Intlk04, Intlk08, Intlk16**: ``In01``, ``In02``, …"
+msgstr "**Intlk02 , Intlk04, Intlk08, Intlk16**: ``In01``, ``In02``, …"
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:27 simulated the
+#: using
+msgid ""
+"**DoseL, MotL, MotSpdL, MotSpdCL, VlvL, Vlv2WayL, VlvAnL**: ``Permit``, "
+"``Interlock``, ``Protect``"
+msgstr ""
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:28 simulated the
+#: using
+msgid ""
+"**MotRevL** : ``Permit``, ``Interlock``, ``Protect``, ``PermRev``, ``IntlRev``, "
+"``ProtRev``"
+msgstr ""
+"**MotRevL** : ``Permit``, ``Interlock``, ``Protect``, ``PermRev``, ``IntlRev``, "
+"``ProtRev``"
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:29 simulated the
+#: using
+msgid ""
+"**VlvMotL , VlvPosL**: ``Permit``, ``Interlock``, ``Protect``, ``PermCls``, "
+"``IntlCls``, ``ProtCls``"
+msgstr ""
+"**VlvMotL , VlvPosL**: ``Permit``, ``Interlock``, ``Protect``, ``PermCls``, "
+"``IntlCls``, ``ProtCls``"
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:30 simulated the
+#: using
+msgid "**MotS , VlvS, OpDi01, OpDi03, PIDConL, PIDConR**: ``Interlock``"
+msgstr "**MotS , VlvS, OpDi01, OpDi03, PIDConL, PIDConR**: ``Interlock``"
+
+#: - ../../docs/Basics APL/Functions Feature/2 Separate and blocks/Configurable
+#: evaluation excluded for interlock of response signals.rst:32 simulated the
+#: using
+msgid ""
+"The inversion of the interlocking signals occurs via the ``InvIn01``, "
+"``InvIn02``, … inputs on the interlocking blocks."
 msgstr ""
 
 #: - ../../docs/Basics APL/Functions Automatic Enable Feature/21
@@ -784,10 +900,10 @@ msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:9 modes
 #: of the
-msgid "With LocalSetting = 0, you prevent a change to \"local mode\"."
+msgid "With ``LocalSetting = 0``, you prevent a change to \"local mode\"."
 msgstr ""
-"Запретить переключение в локальный режим можно с помощью параметра LocalSetting "
-"= 0."
+"Запретить переключение в локальный режим можно с помощью параметра "
+"``LocalSetting = 0``."
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:12 modes
 #: of the
@@ -825,20 +941,21 @@ msgstr ""
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:22 modes
 #: of the
 msgid ""
-"An operation on the faceplate (input parameter LocalOp = 1, valid if "
-"LocalSetting = 3 or LocalSetting = 4 and ModLiOp = 0) or"
+"An operation on the faceplate (input parameter ``LocalOp = 1``, valid if "
+"``LocalSetting = 3`` or ``LocalSetting = 4`` and ``ModLiOp = 0``) or"
 msgstr ""
-"С помощью команды управления в экранном модуле (входной параметр LocalOp = 1, "
-"действительно для LocalSetting = 3 или LocalSetting = 4 и ModLiOp = 0) или"
+"С помощью команды управления в экранном модуле (входной параметр ``LocalOp = "
+"1``, действительно для ``LocalSetting = 3`` или ``LocalSetting = 4`` и "
+"``ModLiOp = 0``) или"
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:23 modes
 #: of the
 msgid ""
-"The interconnected input parameter (LocalLi = 1, valid if LocalSetting = 1 or "
-"LocalSetting = 2)."
+"The interconnected input parameter (``LocalLi = 1``, valid if ``LocalSetting = "
+"1`` or ``LocalSetting = 2``)."
 msgstr ""
-"С помощью подключённого входного параметра (LocalLi = 1, действительно для "
-"LocalSetting = 1 или LocalSetting = 2)."
+"С помощью подключённого входного параметра (``LocalLi = 1``, действительно для "
+"``LocalSetting = 1`` или ``LocalSetting = 2``)."
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:27 modes
 #: of the
@@ -853,20 +970,27 @@ msgstr ""
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:31 modes
 #: of the
 msgid ""
-"An operation on the faceplate (LocalSetting = 3 or LocalSetting = 4 and ModLiOp "
-"= 0) or"
+"An operation on the faceplate (``LocalSetting = 3`` or ``LocalSetting = 4`` and "
+"``ModLiOp = 0``) or"
 msgstr ""
+"С помощью команды управления в экранном модуле (``LocalSetting = 3`` или "
+"``LocalSetting = 4`` и ``ModLiOp = 0``) или"
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:32 modes
 #: of the
-msgid "the interconnected input parameter (LocalSetting = 1 or LocalSetting = 2)."
+msgid ""
+"the interconnected input parameter (``LocalSetting = 1`` or ``LocalSetting = "
+"2``)."
 msgstr ""
+"с помощью подключённых входных параметров (``LocalSetting = 1`` или "
+"``LocalSetting = 2``)"
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:34 modes
 #: of the
 msgid ""
 "In order to exit local mode via the interconnected input parameter, you can "
-"configure various reactions using a Feature bit Exiting local mode."
+"configure various reactions using a ``Feature`` bit :doc:`Exiting local mode "
+"<../Configurable response using the Feature/10 - Exiting local mode>`."
 msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:38 modes
@@ -898,8 +1022,8 @@ msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:48 modes
 #: of the
-msgid "LocalSetting = 1 and LocalSetting = 3"
-msgstr "LocalSetting = 1 and LocalSetting = 3"
+msgid "``LocalSetting = 1`` and ``LocalSetting = 3``"
+msgstr "``LocalSetting = 1`` and ``LocalSetting = 3``"
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:50 modes
 #: of the
@@ -920,18 +1044,18 @@ msgstr ""
 #: of the
 msgid ""
 "The interlocking functions of the block are activated in accordance with input "
-"parameter BypProt = 0 or deactivated (BypProt = 1)."
+"parameter ``BypProt = 0`` or deactivated (``BypProt = 1``)."
 msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:56 modes
 #: of the
-msgid "The block VlvAnL does not support LocalSetting = 1/3."
+msgid "The block VlvAnL does not support ``LocalSetting = 1/3``."
 msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:58 modes
 #: of the
-msgid "LocalSetting = 2 and LocalSetting = 4"
-msgstr "LocalSetting = 2 and LocalSetting = 4"
+msgid "``LocalSetting = 2`` and ``LocalSetting = 4``"
+msgstr "``LocalSetting = 2`` and ``LocalSetting = 4``"
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:60 modes
 #: of the
@@ -955,27 +1079,27 @@ msgstr ""
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:67 modes
 #: of the
 msgid "**VlvMotL**"
-msgstr ""
+msgstr "**VlvMotL**"
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:69 modes
 #: of the
 msgid ""
 "The motor and valve feedback signals are monitored if the motor feedback "
-"signlas exist and are connected with FbkOpening and FbkClosing (Feature bit 12 "
-"= 0). The motor feedback signals are only monitored in the end positions of the "
-"valve and in discrepancy. For example, if the valve is in end position FbkOpen "
-"=1 and the motor feedback FbkOpening =1 is pending, an error message is "
-"generated upon expiration of the monitoring time. If there are no motor "
-"feedback signals (Feature bit 12 = 1), monitoring of the valve and motor "
-"feedback signals does not take place."
+"signlas exist and are connected with ``FbkOpening`` and ``FbkClosing`` "
+"(``Feature`` bit 12 = 0). The motor feedback signals are only monitored in the "
+"end positions of the valve and in discrepancy. For example, if the valve is in "
+"end position ``FbkOpen = 1`` and the motor feedback ``FbkOpening = 1`` is "
+"pending, an error message is generated upon expiration of the monitoring time. "
+"If there are no motor feedback signals (``Feature`` bit 12 = 1), monitoring of "
+"the valve and motor feedback signals does not take place."
 msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:72 modes
 #: of the
 msgid ""
 "**VlvAnL**: The auxiliary valve is controlled via internal tracking of the "
-"feedback signals FbkAuxVCloseOut and FbkAuxVOpenOut. The control of the main "
-"valve via the feedback value Rbk is not affected by this."
+"feedback signals ``FbkAuxVCloseOut`` and ``FbkAuxVOpenOut``. The control of the "
+"main valve via the feedback value Rbk is not affected by this."
 msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:74 modes
@@ -1013,34 +1137,48 @@ msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:86 modes
 #: of the
-msgid "LocalSetting ="
-msgstr "LocalSetting ="
+msgid "``LocalSetting =``"
+msgstr "``LocalSetting =``"
 
-#: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:87 modes
-#: of the
+#: - ../../docs/Basics ../../docs/Interlock 16 APL/Functions Interlock
+#: Intlk16.rst:58 Intlk16.rst:133 Intlk16.rst:208 Intlk16.rst:283 Intlk16.rst:358
+#: Intlk16.rst:433 Intlk16.rst:508 blocks/Intlk16 blocks/Local blocks/Operating
+#: display input mode.rst:87 modes of signals/Description the with
 msgid "0"
 msgstr "0"
 
-#: ../../docs/Basics ../../docs/Motor ../../docs/Аварии/Аварии.rst:12
-#: APL/Functions and blocks/Local blocks/MotL/MotL blocks/Operating
-#: messaging.rst:11 mode.rst:88 modes of the valve
+#: - ../../docs/Basics ../../docs/Interlock ../../docs/Motor
+#: ../../docs/Аварии/Аварии.rst:12 16 APL/Functions Interlock
+#: Intlk16.rst:60 Intlk16.rst:135 Intlk16.rst:210 Intlk16.rst:285 Intlk16.rst:360
+#: Intlk16.rst:435 Intlk16.rst:510 and blocks/Intlk16 blocks/Local
+#: blocks/MotL/MotL blocks/Operating display input messaging.rst:11 mode.rst:88
+#: modes of signals/Description the valve with
 msgid "1"
 msgstr "1"
 
-#: ../../docs/Basics ../../docs/Motor ../../docs/Аварии/Аварии.rst:17
-#: APL/Functions and blocks/Local blocks/MotL/MotL blocks/Operating
-#: messaging.rst:15 mode.rst:89 modes of the valve
+#: - ../../docs/Basics ../../docs/Interlock ../../docs/Motor
+#: ../../docs/Аварии/Аварии.rst:17 16 APL/Functions Interlock
+#: Intlk16.rst:62 Intlk16.rst:137 Intlk16.rst:212 Intlk16.rst:287 Intlk16.rst:362
+#: Intlk16.rst:437 Intlk16.rst:512 and blocks/Intlk16 blocks/Local
+#: blocks/MotL/MotL blocks/Operating display input messaging.rst:15 mode.rst:89
+#: modes of signals/Description the valve with
 msgid "2"
 msgstr "2"
 
-#: ../../docs/Basics ../../docs/Motor ../../docs/Аварии/Аварии.rst:22
-#: APL/Functions and blocks/Local blocks/MotL/MotL blocks/Operating
-#: messaging.rst:19 mode.rst:90 modes of the valve
+#: - ../../docs/Basics ../../docs/Interlock ../../docs/Motor
+#: ../../docs/Аварии/Аварии.rst:22 16 APL/Functions Interlock
+#: Intlk16.rst:64 Intlk16.rst:139 Intlk16.rst:214 Intlk16.rst:289 Intlk16.rst:364
+#: Intlk16.rst:439 Intlk16.rst:514 and blocks/Intlk16 blocks/Local
+#: blocks/MotL/MotL blocks/Operating display input messaging.rst:19 mode.rst:90
+#: modes of signals/Description the valve with
 msgid "3"
 msgstr "3"
 
-#: ../../docs/Basics ../../docs/Аварии/Аварии.rst:27 APL/Functions
-#: blocks/Local blocks/Operating mode.rst:91 modes of the
+#: - ../../docs/Basics ../../docs/Interlock
+#: ../../docs/Аварии/Аварии.rst:27 16 APL/Functions Interlock
+#: Intlk16.rst:66 Intlk16.rst:141 Intlk16.rst:216 Intlk16.rst:291 Intlk16.rst:366
+#: Intlk16.rst:441 Intlk16.rst:516 blocks/Intlk16 blocks/Local blocks/Operating
+#: display input mode.rst:91 modes of signals/Description the with
 msgid "4"
 msgstr "4"
 
@@ -1062,8 +1200,8 @@ msgstr "Невозможно"
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:95
 #: mode.rst:96 mode.rst:102 mode.rst:103 mode.rst:106 mode.rst:109 mode.rst:110
 #: mode.rst:113 modes of the
-msgid "CFC/SFC"
-msgstr "Программно"
+msgid "PLC Program"
+msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:97
 #: mode.rst:98 modes of the
@@ -1073,22 +1211,23 @@ msgstr "АРМ"
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:99 modes
 #: of the
 msgid "CFC"
-msgstr ""
+msgstr "CFC"
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:100
 #: modes of the
-msgid "Changing the operating mode: Local mode/to manual mode only (Feature = 0)"
+msgid ""
+"Changing the operating mode: Local mode/to manual mode only (``Feature = 0``)"
 msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:101
 #: mode.rst:104 mode.rst:105 mode.rst:108 mode.rst:111 mode.rst:112 mode.rst:115
 #: mode.rst:120 mode.rst:122 mode.rst:129 mode.rst:136 modes of the
 msgid "\\-"
-msgstr ""
+msgstr "\\-"
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:107
 #: modes of the
-msgid "Changing the operating mode: Local mode/previous mode (Feature = 1)"
+msgid "Changing the operating mode: Local mode/previous mode (``Feature = 1``)"
 msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:114
@@ -1157,17 +1296,1273 @@ msgstr "Блокировки активны"
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:137
 #: mode.rst:139 modes of the
-msgid "Yes: (BypProt = 0) No: (BypProt = 1)"
+msgid "Yes: (``BypProt = 0``) No: (``BypProt = 1``)"
 msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks/Local blocks/Operating mode.rst:138
 #: mode.rst:140 mode.rst:141 modes of the
-msgid "only at output LockAct with Feature Bit 27 = 1 and BypProt = 0"
+msgid "only at output ``LockAct`` with ``Feature`` Bit 27 = 1 and ``BypProt = 0``"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions and automatic blocks.rst:2 blocks/Manual
+#: blocks/Operating control for mode modes of the
+msgid "Manual and automatic mode for control blocks"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions and automatic blocks/Manual blocks/Operating
+#: dosers.rst:2 for mode modes motors, of the valves
+msgid "Manual and automatic mode for motors, valves and dosers"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/On.rst:2 blocks/Operating modes of the
+msgid "On"
 msgstr ""
 
 #: ../../docs/Basics APL/Functions blocks.rst:2 blocks/Operating modes of the
 msgid "Operating modes of the blocks"
 msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Out modes of
+#: service.rst:2 the
+msgid "Out of service"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:2 of the
+msgid "Overview of the modes"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:5 of the
+msgid "Overview of the individual modes"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:7 of the
+msgid "The available operating modes are assigned to the block families:"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:9 of the
+msgid "Motors, valves and dosers"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:10 of the
+msgid "Controllers"
+msgstr "Controllers"
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:11 of the
+msgid "Blocks without \"Manual\" and \"Automatic\" modes"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:13 of the
+msgid ""
+"You can find an overview below. Click on one of the operating modes to go "
+"directly to the relevant detailed description."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:15 of the
+msgid ""
+"You can find a :doc:`State graph of the operating modes` at the end of this "
+"section."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:19 of the
+msgid "Operating modes for motors, valves and dosers"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:21 modes.rst:34 modes.rst:47 of the
+msgid "The following operating modes are available:"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:23 of the
+msgid ":doc:`Local mode`"
+msgstr ":doc:`Local mode`"
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:24 of the
+msgid ""
+":doc:`Automatic mode <Manual and automatic mode for motors, valves and dosers>`"
+msgstr ""
+":doc:`Автоматический режим <Manual and automatic mode for motors, valves and "
+"dosers>`"
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:25 of the
+msgid ""
+":doc:`Manual mode <Manual and automatic mode for motors, valves and dosers>`"
+msgstr ""
+":doc:`Ручной режим <Manual and automatic mode for motors, valves and dosers>`"
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:26 modes.rst:39 modes.rst:50 of the
+msgid ":doc:`Out of service`"
+msgstr ":doc:`Out of service`"
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:28 of the
+msgid ""
+"The mode with the lowest number in the list above has the highest priority. "
+"\"Manual\" and \"Automatic\" modes have the same priority. General information "
+"on the individual modes is available in the following sections. The sections "
+"also include block-specific information, for example, non-standard parameter "
+"assignment. Refer to the description and function of the relevant blocks."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:32 of the
+msgid "Operating modes for controllers"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:36 of the
+msgid ":doc:`Automatic mode <Manual and automatic mode for control blocks>`"
+msgstr ""
+":doc:`Автоматический режим <Manual and automatic mode for control blocks>`"
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:37 of the
+msgid ":doc:`Manual mode <Manual and automatic mode for control blocks>`"
+msgstr ":doc:`Ручной режим <Manual and automatic mode for control blocks>`"
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:38 of the
+msgid ":doc:`Program mode for controllers`"
+msgstr ":doc:`Program mode for controllers`"
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:41 of the
+msgid ""
+"The mode with the lowest number has highest priority. \"Manual\" and \"Automatic"
+"\" modes have the same priority. General information on the individual modes is "
+"available in the following sections. The sections also include block-specific "
+"information, for example, non-standard parameter assignment. Refer to the "
+"description and function of the relevant blocks."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:45 of the
+msgid "Operating modes for blocks without \"Manual\" and \"Automatic\" operation"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:49 of the
+msgid ":doc:`On`"
+msgstr ":doc:`On`"
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:52 of the
+msgid ""
+"The mode with the lowest number has highest priority. General information on "
+"the individual modes is available in the following sections. The sections also "
+"include block-specific information, for example, non-standard parameter "
+"assignment. Refer to the description and function of the relevant blocks."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Overview modes
+#: modes.rst:55 of the
+msgid ""
+"Note that the operating modes are realized differently in the individual block "
+"families."
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/Program
+#: controllers.rst:2 for mode modes of the
+msgid "Program mode for controllers"
+msgstr ""
+
+#: ../../docs/Basics APL/Functions blocks/Operating blocks/State graph modes
+#: modes.rst:2 of operating the
+msgid "State graph of the operating modes"
+msgstr "Граф состояния режимов работы"
+
+#: ../../docs/Interlock blocks.rst:2 blocks/Interlock
+msgid "Interlock blocks"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:2 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Description of Intlk16"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:5 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Object name (type + number) and family"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:7 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Type + number: FB 1827"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:9 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Family: Interlck"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:13 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Area of application for Intlk16"
+msgstr "Область применения Intlk16"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:15 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "The block is used for the following applications:"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:17 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Standardized interlock with display"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:21 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "How it works"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:23 blocks/Intlk16 display input
+#: of signals/Description with
+msgid ""
+"The block is used to calculate a standardized interlock that can be displayed "
+"on the OS. A maximum of 16 input signals can be supplied to the block. They are "
+"linked using selectable binary logic. The signal status of the output signal is "
+"also determined. You can assign an analog value with the signal status and unit "
+"to each input value for display in the faceplate."
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:25 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "The current state is displayed at the Out output parameter:"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:27 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "``Out = 0``: Interlock"
+msgstr "``Out = 0``: Блокировка"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:28 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "``Out = 1``: \"Good\" state"
+msgstr "``Out = 1``: Нормальное состояние"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:32 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Configuration"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:34 blocks/Intlk16 display input
+#: of signals/Description with
+msgid ""
+"Use the CFC editor to install the block in a cyclic interrupt OB (OB30 to OB38)."
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:36 blocks/Intlk16 display input
+#: of signals/Description with
+msgid ""
+"For the Intlk02 (Intlk16) block, the Advanced Process Library contains "
+"templates for process tag types as examples with various application scenarios "
+"for this block."
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:38 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Refer to Description of Intlk02 for more information."
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:42 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Startup characteristics"
+msgstr "Стартовые характеристики"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:44 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "The block does not have any startup characteristics."
+msgstr "Этот модуль не имеет характеристик запуска."
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:48 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Status word allocation for ``Status1`` parameter"
+msgstr "Назначение битов состояния параметру ``Status1``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:50 blocks/Intlk16 display input
+#: of signals/Description with
+msgid ""
+"You can find a description for each parameter in section :doc:`Intlk16 IOs`."
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:56 Intlk16.rst:131
+#: Intlk16.rst:206 Intlk16.rst:281 Intlk16.rst:356 Intlk16.rst:431 Intlk16.rst:506
+#: blocks/Intlk16 display input of signals/Description with
+msgid "Status bit"
+msgstr "Бит состояния"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:57 Intlk16.rst:132
+#: Intlk16.rst:207 Intlk16.rst:282 Intlk16.rst:357 Intlk16.rst:432 Intlk16.rst:507
+#: blocks/Intlk16 display input of signals/Description with
+msgid "Parameter"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:59 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "1 = ``Logic = OR``"
+msgstr "1 = ``Logic = OR``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:61 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "1 = ``Logic = AND``"
+msgstr "1 = ``Logic = AND``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:63 Intlk16.rst:79
+#: Intlk16.rst:83 Intlk16.rst:85 Intlk16.rst:87 Intlk16.rst:89 Intlk16.rst:91
+#: Intlk16.rst:93 Intlk16.rst:95 Intlk16.rst:97 Intlk16.rst:99 Intlk16.rst:101
+#: Intlk16.rst:103 Intlk16.rst:105 Intlk16.rst:107 Intlk16.rst:109 Intlk16.rst:111
+#: Intlk16.rst:113 Intlk16.rst:115 Intlk16.rst:117 Intlk16.rst:166 Intlk16.rst:168
+#: Intlk16.rst:170 Intlk16.rst:172 Intlk16.rst:174 Intlk16.rst:176 Intlk16.rst:178
+#: Intlk16.rst:180 Intlk16.rst:182 Intlk16.rst:184 Intlk16.rst:186 Intlk16.rst:188
+#: Intlk16.rst:190 Intlk16.rst:192 Intlk16.rst:194 Intlk16.rst:196 Intlk16.rst:241
+#: Intlk16.rst:243 Intlk16.rst:245 Intlk16.rst:247 Intlk16.rst:249 Intlk16.rst:251
+#: Intlk16.rst:253 Intlk16.rst:255 Intlk16.rst:257 Intlk16.rst:259 Intlk16.rst:261
+#: Intlk16.rst:263 Intlk16.rst:265 Intlk16.rst:267 Intlk16.rst:269 Intlk16.rst:271
+#: Intlk16.rst:466 Intlk16.rst:468 Intlk16.rst:470 Intlk16.rst:472 Intlk16.rst:474
+#: Intlk16.rst:476 Intlk16.rst:478 Intlk16.rst:480 Intlk16.rst:482 Intlk16.rst:484
+#: Intlk16.rst:486 Intlk16.rst:488 Intlk16.rst:490 Intlk16.rst:492 Intlk16.rst:494
+#: Intlk16.rst:496 Intlk16.rst:541 Intlk16.rst:543 Intlk16.rst:545 Intlk16.rst:547
+#: Intlk16.rst:549 Intlk16.rst:551 Intlk16.rst:553 Intlk16.rst:555 Intlk16.rst:557
+#: Intlk16.rst:559 Intlk16.rst:561 Intlk16.rst:563 Intlk16.rst:565 Intlk16.rst:567
+#: Intlk16.rst:569 Intlk16.rst:571 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "Not used"
+msgstr "Не используется"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:65 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Result of logic operation ``Out.Value``"
+msgstr "Результат соединения ``Out.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:67 blocks/Intlk16 display input
+#: of signals/Description with
+msgid ""
+"1 = At least one input value is excluded. See the section Excluding input "
+"values in Intlk16 functions"
+msgstr ""
+"1 = исключено, по меньшей мере, одно входное значение. Дополнительную "
+"информацию см. в главе \"Исключение входных значений\" в Функции Intlk16"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:32 16 Interlock
+#: Intlk16.rst:68 Intlk16.rst:143 Intlk16.rst:218 Intlk16.rst:293 Intlk16.rst:368
+#: Intlk16.rst:443 Intlk16.rst:518 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "5"
+msgstr "5"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:69 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "All input values are excluded"
+msgstr "1 = исключены все входные значения"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:37 16 Interlock
+#: Intlk16.rst:70 Intlk16.rst:145 Intlk16.rst:220 Intlk16.rst:295 Intlk16.rst:370
+#: Intlk16.rst:445 Intlk16.rst:520 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "6"
+msgstr "6"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:71 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "1 = No input value is interconnected or ``NotUsed.Value``"
+msgstr "1 = не подключено ни одно входное значение или ``NotUsed.Value``"
+
+#: - ../../docs/Interlock ../../docs/Motor
+#: ../../docs/Аварии/Аварии.rst:42 16 Interlock Intlk16.rst:72
+#: Intlk16.rst:147 Intlk16.rst:222 Intlk16.rst:297 Intlk16.rst:372 Intlk16.rst:447
+#: Intlk16.rst:522 and blocks/Intlk16 blocks/MotL/MotL display input
+#: messaging.rst:12 messaging.rst:16 messaging.rst:20 of signals/Description valve
+#: with
+msgid "7"
+msgstr "7"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:73 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Status display for simulation"
+msgstr ""
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:47 16 Interlock
+#: Intlk16.rst:74 Intlk16.rst:149 Intlk16.rst:224 Intlk16.rst:299 Intlk16.rst:374
+#: Intlk16.rst:449 Intlk16.rst:524 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "8"
+msgstr "8"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:75 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Status display for not interlocked"
+msgstr ""
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:52 16 Interlock
+#: Intlk16.rst:76 Intlk16.rst:151 Intlk16.rst:226 Intlk16.rst:301 Intlk16.rst:376
+#: Intlk16.rst:451 Intlk16.rst:526 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "9"
+msgstr "9"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:77 blocks/Intlk16 display input
+#: of signals/Description with
+msgid "Status display for interlocked"
+msgstr ""
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:57 16 Interlock
+#: Intlk16.rst:78 Intlk16.rst:153 Intlk16.rst:228 Intlk16.rst:303 Intlk16.rst:378
+#: Intlk16.rst:453 Intlk16.rst:528 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "10"
+msgstr "10"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:62 16 Interlock
+#: Intlk16.rst:80 Intlk16.rst:155 Intlk16.rst:230 Intlk16.rst:305 Intlk16.rst:380
+#: Intlk16.rst:455 Intlk16.rst:530 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "11"
+msgstr "11"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:81 blocks/Intlk16 display input
+#: of signals/Description with
+msgid ""
+"``Feature`` bit 2: Separate evaluation for excluded and simulated interlock "
+"signals"
+msgstr ""
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:67 16 Interlock
+#: Intlk16.rst:82 Intlk16.rst:157 Intlk16.rst:232 Intlk16.rst:307 Intlk16.rst:382
+#: Intlk16.rst:457 Intlk16.rst:532 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "12"
+msgstr "12"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:72 16 Interlock
+#: Intlk16.rst:84 Intlk16.rst:159 Intlk16.rst:234 Intlk16.rst:309 Intlk16.rst:384
+#: Intlk16.rst:459 Intlk16.rst:534 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "13"
+msgstr "13"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:77 16 Interlock
+#: Intlk16.rst:86 Intlk16.rst:161 Intlk16.rst:236 Intlk16.rst:311 Intlk16.rst:386
+#: Intlk16.rst:461 Intlk16.rst:536 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "14"
+msgstr "14"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:82 16 Interlock
+#: Intlk16.rst:88 Intlk16.rst:163 Intlk16.rst:238 Intlk16.rst:313 Intlk16.rst:388
+#: Intlk16.rst:463 Intlk16.rst:538 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "15"
+msgstr "15"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:87 16 Interlock
+#: Intlk16.rst:90 Intlk16.rst:165 Intlk16.rst:240 Intlk16.rst:315 Intlk16.rst:390
+#: Intlk16.rst:465 Intlk16.rst:540 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "16"
+msgstr "16"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:92 16 Interlock
+#: Intlk16.rst:92 Intlk16.rst:167 Intlk16.rst:242 Intlk16.rst:317 Intlk16.rst:392
+#: Intlk16.rst:467 Intlk16.rst:542 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "17"
+msgstr "17"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:97 16 Interlock
+#: Intlk16.rst:94 Intlk16.rst:169 Intlk16.rst:244 Intlk16.rst:319 Intlk16.rst:394
+#: Intlk16.rst:469 Intlk16.rst:544 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "18"
+msgstr "18"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:102 16
+#: Interlock Intlk16.rst:96 Intlk16.rst:171 Intlk16.rst:246 Intlk16.rst:321
+#: Intlk16.rst:396 Intlk16.rst:471 Intlk16.rst:546 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "19"
+msgstr "19"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:107 16
+#: Interlock Intlk16.rst:98 Intlk16.rst:173 Intlk16.rst:248 Intlk16.rst:323
+#: Intlk16.rst:398 Intlk16.rst:473 Intlk16.rst:548 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "20"
+msgstr "20"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:112 16
+#: Interlock Intlk16.rst:100 Intlk16.rst:175 Intlk16.rst:250 Intlk16.rst:325
+#: Intlk16.rst:400 Intlk16.rst:475 Intlk16.rst:550 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "21"
+msgstr "21"
+
+#: - ../../docs/Interlock ../../docs/Аварии/Аварии.rst:117 16
+#: Interlock Intlk16.rst:102 Intlk16.rst:177 Intlk16.rst:252 Intlk16.rst:327
+#: Intlk16.rst:402 Intlk16.rst:477 Intlk16.rst:552 blocks/Intlk16 display input of
+#: signals/Description with
+msgid "22"
+msgstr "22"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:104 Intlk16.rst:179
+#: Intlk16.rst:254 Intlk16.rst:329 Intlk16.rst:404 Intlk16.rst:479 Intlk16.rst:554
+#: blocks/Intlk16 display input of signals/Description with
+msgid "23"
+msgstr "23"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:106 Intlk16.rst:181
+#: Intlk16.rst:256 Intlk16.rst:331 Intlk16.rst:406 Intlk16.rst:481 Intlk16.rst:556
+#: blocks/Intlk16 display input of signals/Description with
+msgid "24"
+msgstr "24"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:108 Intlk16.rst:183
+#: Intlk16.rst:258 Intlk16.rst:333 Intlk16.rst:408 Intlk16.rst:483 Intlk16.rst:558
+#: blocks/Intlk16 display input of signals/Description with
+msgid "25"
+msgstr "25"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:110 Intlk16.rst:185
+#: Intlk16.rst:260 Intlk16.rst:335 Intlk16.rst:410 Intlk16.rst:485 Intlk16.rst:560
+#: blocks/Intlk16 display input of signals/Description with
+msgid "26"
+msgstr "26"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:112 Intlk16.rst:187
+#: Intlk16.rst:262 Intlk16.rst:337 Intlk16.rst:412 Intlk16.rst:487 Intlk16.rst:562
+#: blocks/Intlk16 display input of signals/Description with
+msgid "27"
+msgstr "27"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:114 Intlk16.rst:189
+#: Intlk16.rst:264 Intlk16.rst:339 Intlk16.rst:414 Intlk16.rst:489 Intlk16.rst:564
+#: blocks/Intlk16 display input of signals/Description with
+msgid "28"
+msgstr "28"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:116 Intlk16.rst:191
+#: Intlk16.rst:266 Intlk16.rst:341 Intlk16.rst:416 Intlk16.rst:491 Intlk16.rst:566
+#: blocks/Intlk16 display input of signals/Description with
+msgid "29"
+msgstr "29"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:118 Intlk16.rst:193
+#: Intlk16.rst:268 Intlk16.rst:343 Intlk16.rst:418 Intlk16.rst:493 Intlk16.rst:568
+#: blocks/Intlk16 display input of signals/Description with
+msgid "30"
+msgstr "30"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:119 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Occupied"
+msgstr "Occupied"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:120 Intlk16.rst:195
+#: Intlk16.rst:270 Intlk16.rst:345 Intlk16.rst:420 Intlk16.rst:495 Intlk16.rst:570
+#: blocks/Intlk16 display input of signals/Description with
+msgid "31"
+msgstr "31"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:121 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "BatchEn"
+msgstr "BatchEn"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:125 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Status word allocation for ``Status2`` parameter"
+msgstr "Назначение битов состояния параметру ``Status2``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:134 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In01.Value``"
+msgstr "``In01.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:136 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In02.Value``"
+msgstr "``In02.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:138 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In03.Value``"
+msgstr "``In03.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:140 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In04.Value``"
+msgstr "``In04.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:142 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In05.Value``"
+msgstr "``In05.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:144 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In06.Value``"
+msgstr "``In06.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:146 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In07.Value``"
+msgstr "``In07.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:148 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In08.Value``"
+msgstr "``In08.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:150 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In09.Value``"
+msgstr "``In09.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:152 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In10.Value``"
+msgstr "``In10.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:154 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In11.Value``"
+msgstr "``In11.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:156 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In12.Value``"
+msgstr "``In12.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:158 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In13.Value``"
+msgstr "``In13.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:160 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In14.Value``"
+msgstr "``In14.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:162 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In15.Value``"
+msgstr "``In15.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:164 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In16.Value``"
+msgstr "``In16.Value``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:200 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Status word allocation for ``Status3`` parameter"
+msgstr "Назначение битов состояния параметру ``Status3``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:209 Intlk16.rst:213
+#: blocks/Intlk16 display input of signals/Description with
+msgid "``InvIn01``"
+msgstr "``InvIn01``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:211 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn02``"
+msgstr "``InvIn02``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:215 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn04``"
+msgstr "``InvIn04``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:217 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn05``"
+msgstr "``InvIn05``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:219 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn06``"
+msgstr "``InvIn06``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:221 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn07``"
+msgstr "``InvIn07``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:223 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn08``"
+msgstr "``InvIn08``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:225 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn09``"
+msgstr "``InvIn09``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:227 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn10``"
+msgstr "``InvIn10``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:229 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn11``"
+msgstr "``InvIn11``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:231 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn2``"
+msgstr "``InvIn2``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:233 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn13``"
+msgstr "``InvIn13``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:235 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn14``"
+msgstr "``InvIn14``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:237 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn15``"
+msgstr "``InvIn15``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:239 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``InvIn16``"
+msgstr "``InvIn16``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:275 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Status word allocation for ``Status4`` parameter"
+msgstr "Назначение битов состояния параметру ``Status4``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:284 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In01`` with inversion"
+msgstr "``In01`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:286 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In02`` with inversion"
+msgstr "``In02`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:288 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In03`` with inversion"
+msgstr "``In03`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:290 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In04`` with inversion"
+msgstr "``In04`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:292 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In05`` with inversion"
+msgstr "``In05`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:294 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In06`` with inversion"
+msgstr "``In06`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:296 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In07`` with inversion"
+msgstr "``In07`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:298 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In08`` with inversion"
+msgstr "``In08`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:300 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In09`` with inversion"
+msgstr "``In09`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:302 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In10`` with inversion"
+msgstr "``In10`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:304 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In11`` with inversion"
+msgstr "``In11`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:306 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In12`` with inversion"
+msgstr "``In12`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:308 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In13`` with inversion"
+msgstr "``In13`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:310 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In14`` with inversion"
+msgstr "``In14`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:312 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In15`` with inversion"
+msgstr "``In15`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:314 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In16`` with inversion"
+msgstr "``In16`` с инвертированием"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:316 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In01`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:318 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In02`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:320 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In03`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:322 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In04`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:324 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In05`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:326 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In06`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:328 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In07`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:330 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In08`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:332 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In09`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:334 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In10`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:336 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In11`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:338 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In12`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:340 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In13`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:342 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In14`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:344 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In15`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:346 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Bypass ``In16`` (via interconnection)"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:350 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Status word allocation for ``Status5`` parameter"
+msgstr "Назначение битов состояния параметру ``Status5``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:359 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn01``"
+msgstr "``BypIn01``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:361 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn02``"
+msgstr "``BypIn02``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:363 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn03``"
+msgstr "``BypIn03``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:365 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn04``"
+msgstr "``BypIn04``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:367 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn05``"
+msgstr "``BypIn05``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:369 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn06``"
+msgstr "``BypIn06``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:371 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn07``"
+msgstr "``BypIn07``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:373 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn08``"
+msgstr "``BypIn08``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:375 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn09``"
+msgstr "``BypIn09``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:377 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn10``"
+msgstr "``BypIn10``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:379 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn11``"
+msgstr "``BypIn11``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:381 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn12``"
+msgstr "``BypIn12``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:383 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn13``"
+msgstr "``BypIn13``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:385 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn14``"
+msgstr "``BypIn14``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:387 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn15``"
+msgstr "``BypIn15``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:389 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``BypIn16``"
+msgstr "``BypIn16``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:391 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In01`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:393 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In02`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:395 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In03`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:397 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In04`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:399 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In05`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:401 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In06`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:403 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In07`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:405 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In08`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:407 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In09`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:409 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In10`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:411 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In11`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:413 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In12`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:415 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In13`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:417 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In14`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:419 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In15`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:421 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In16`` hidden bypass information"
+msgstr ""
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:425 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Status word allocation for ``Status6`` parameter"
+msgstr "Назначение битов состояния параметру ``Status6``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:434 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In01`` not connected"
+msgstr "``In01`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:436 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In02`` not connected"
+msgstr "``In02`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:438 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In03`` not connected"
+msgstr "``In03`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:440 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In04`` not connected"
+msgstr "``In04`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:442 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In05`` not connected"
+msgstr "``In05`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:444 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In06`` not connected"
+msgstr "``In06`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:446 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In07`` not connected"
+msgstr "``In07`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:448 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In08`` not connected"
+msgstr "``In08`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:450 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In09`` not connected"
+msgstr "``In09`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:452 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In10`` not connected"
+msgstr "``In10`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:454 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In11`` not connected"
+msgstr "``In11`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:456 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In12`` not connected"
+msgstr "``In12`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:458 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In13`` not connected"
+msgstr "``In13`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:460 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In14`` not connected"
+msgstr "``In14`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:462 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In15`` not connected"
+msgstr "``In15`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:464 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``In16`` not connected"
+msgstr "``In16`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:500 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Status word allocation for ``Status7`` parameter"
+msgstr "Назначение битов состояния параметру ``Status7``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:509 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV01`` not connected"
+msgstr "``AV01`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:511 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV02`` not connected"
+msgstr "``AV02`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:513 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV03`` not connected"
+msgstr "``AV03`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:515 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV04`` not connected"
+msgstr "``AV04`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:517 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV05`` not connected"
+msgstr "``AV05`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:519 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV06`` not connected"
+msgstr "``AV06`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:521 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV07`` not connected"
+msgstr "``AV07`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:523 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV08`` not connected"
+msgstr "``AV08`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:525 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV09`` not connected"
+msgstr "``AV09`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:527 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV10`` not connected"
+msgstr "``AV10`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:529 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV11`` not connected"
+msgstr "``AV11`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:531 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV12`` not connected"
+msgstr "``AV12`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:533 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV13`` not connected"
+msgstr "``AV13`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:535 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV14`` not connected"
+msgstr "``AV14`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:537 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV15`` not connected"
+msgstr "``AV15`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:539 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "``AV16`` not connected"
+msgstr "``AV16`` не включен"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:575 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Status word allocation for ``Status8`` parameter"
+msgstr "Назначение битов состояния параметру ``Status8``"
+
+#: - ../../docs/Interlock 16 Interlock Intlk16.rst:577 blocks/Intlk16 display
+#: input of signals/Description with
+msgid "Identical to ``FirstIn``."
+msgstr "Идентично ``FirstIn``."
+
+#: - ../../docs/Interlock 16 Interlock blocks/Intlk16 display input signals.rst:2
+#: signals/Intlk16 with
+msgid "Intlk16 - Interlock display with 16 input signals"
+msgstr ""
+
+#: - ../../docs/Interlock 16 IOs.rst:2 Interlock blocks/Intlk16 display input
+#: signals/Intlk16 with
+msgid "Intlk16 IOs"
+msgstr "Подключения Intlk16"
 
 #: ../../docs/Motor and blocks/MotL/MotL.rst:2 valve
 msgid "MotL - двигатель"
@@ -1202,11 +2597,6 @@ msgstr ""
 #: ../../docs/Motor and blocks/MotL/MotL messaging.rst:10 valve
 msgid "Сообщение (рус.)"
 msgstr ""
-
-#: ../../docs/Motor ../../docs/Аварии/Аварии.rst:42 and
-#: blocks/MotL/MotL messaging.rst:12 messaging.rst:16 messaging.rst:20 valve
-msgid "7"
-msgstr "7"
 
 #: ../../docs/Motor and blocks/MotL/MotL messaging.rst:13 valve
 msgid "Motor feedback error"
@@ -1255,7 +2645,7 @@ msgstr ""
 
 #: ../../docs/Аварии/Аварии.rst:15
 msgid "Alarm – high"
-msgstr ""
+msgstr "Аварийное превышение"
 
 #: ../../docs/Аварии/Аварии.rst:16
 msgid "Аварийное превышение"
@@ -1263,7 +2653,7 @@ msgstr ""
 
 #: ../../docs/Аварии/Аварии.rst:20
 msgid "Alarm – low"
-msgstr ""
+msgstr "Аварийное принижение"
 
 #: ../../docs/Аварии/Аварии.rst:21
 msgid "Аварийное принижение"
@@ -1271,7 +2661,7 @@ msgstr ""
 
 #: ../../docs/Аварии/Аварии.rst:25
 msgid "Warning – high"
-msgstr ""
+msgstr "Предупредительное превышение"
 
 #: ../../docs/Аварии/Аварии.rst:26
 msgid "Предупредительное превышение"
@@ -1279,31 +2669,23 @@ msgstr ""
 
 #: ../../docs/Аварии/Аварии.rst:30
 msgid "Warning – low"
-msgstr ""
+msgstr "Предупредительное принижение"
 
 #: ../../docs/Аварии/Аварии.rst:31
 msgid "Предупредительное принижение"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:32
-msgid "5"
-msgstr "5"
-
 #: ../../docs/Аварии/Аварии.rst:35
 msgid "Tolerance – high"
-msgstr ""
+msgstr "Превышение допуска"
 
 #: ../../docs/Аварии/Аварии.rst:36
 msgid "Превышение допуска"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:37
-msgid "6"
-msgstr "6"
-
 #: ../../docs/Аварии/Аварии.rst:40
 msgid "Tolerance – low"
-msgstr ""
+msgstr "Принижение допуска"
 
 #: ../../docs/Аварии/Аварии.rst:41
 msgid "Принижение допуска"
@@ -1311,187 +2693,127 @@ msgstr ""
 
 #: ../../docs/Аварии/Аварии.rst:45
 msgid "PLC process control message – Failure"
-msgstr ""
+msgstr "Сообщения ПЛК – сбой"
 
 #: ../../docs/Аварии/Аварии.rst:46
 msgid "Сообщения ПЛК – сбой"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:47
-msgid "8"
-msgstr "8"
-
 #: ../../docs/Аварии/Аварии.rst:50
 msgid "PLC process control message – Error"
-msgstr ""
+msgstr "Сообщения ПЛК – ошибки"
 
 #: ../../docs/Аварии/Аварии.rst:51
 msgid "Сообщения ПЛК – ошибки"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:52
-msgid "9"
-msgstr "9"
-
 #: ../../docs/Аварии/Аварии.rst:55
 msgid "OS process control system message – Failure"
-msgstr ""
+msgstr "Системные сообщения тех. процесса от ОС – сбой"
 
 #: ../../docs/Аварии/Аварии.rst:56
 msgid "Системные сообщения тех. процесса от ОС – сбой"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:57
-msgid "10"
-msgstr "10"
-
 #: ../../docs/Аварии/Аварии.rst:60
 msgid "OS process control system message – Error"
-msgstr ""
+msgstr "Системные сообщения тех. процесса от ОС – ошибки"
 
 #: ../../docs/Аварии/Аварии.rst:61
 msgid "Системные сообщения тех. процесса от ОС – ошибки"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:62
-msgid "11"
-msgstr "11"
-
 #: ../../docs/Аварии/Аварии.rst:65
 msgid "OS Process Control Message – Batch"
-msgstr ""
+msgstr "Системные сообщения тех. процесса от ОС – партия"
 
 #: ../../docs/Аварии/Аварии.rst:66
 msgid "Системные сообщения тех. процесса от ОС – партия"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:67
-msgid "12"
-msgstr "12"
-
 #: ../../docs/Аварии/Аварии.rst:70
 msgid "Preventive maintenance – Maintenance"
-msgstr ""
+msgstr "Профилактическое обслуживание"
 
 #: ../../docs/Аварии/Аварии.rst:71
 msgid "Профилактическое обслуживание"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:72
-msgid "13"
-msgstr "13"
-
 #: ../../docs/Аварии/Аварии.rst:75
 msgid "Process Message – With Ack"
-msgstr ""
+msgstr "Сообщение процесса"
 
 #: ../../docs/Аварии/Аварии.rst:76
 msgid "Сообщение процесса"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:77
-msgid "14"
-msgstr "14"
-
 #: ../../docs/Аварии/Аварии.rst:80
 msgid "Operational Message – Without Ack"
-msgstr ""
+msgstr "Рабочее сообщение"
 
 #: ../../docs/Аварии/Аварии.rst:81
 msgid "Рабочее сообщение"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:82
-msgid "15"
-msgstr "15"
-
 #: ../../docs/Аварии/Аварии.rst:85
 msgid "Operator prompt – Standard"
-msgstr ""
+msgstr "Запрос оператору"
 
 #: ../../docs/Аварии/Аварии.rst:86
 msgid "Запрос оператору"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:87
-msgid "16"
-msgstr "16"
-
 #: ../../docs/Аварии/Аварии.rst:90
 msgid "Operating Message – Standard"
-msgstr ""
+msgstr "Сообщение о действии оператора"
 
 #: ../../docs/Аварии/Аварии.rst:91
 msgid "Сообщение о действии оператора"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:92
-msgid "17"
-msgstr "17"
-
 #: ../../docs/Аварии/Аварии.rst:95
 msgid "Status Message – PLC"
-msgstr ""
+msgstr "Сообщение статуса - статус ПЛК"
 
 #: ../../docs/Аварии/Аварии.rst:96
 msgid "Сообщение статуса  - статус ПЛК"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:97
-msgid "18"
-msgstr "18"
-
 #: ../../docs/Аварии/Аварии.rst:100
 msgid "Status Message – OS"
-msgstr ""
+msgstr "Сообщение статуса – статус ОС"
 
 #: ../../docs/Аварии/Аварии.rst:101
 msgid "Сообщение статуса – статус ОС"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:102
-msgid "19"
-msgstr "19"
-
 #: ../../docs/Аварии/Аварии.rst:105
 msgid "Process control system – with ack"
-msgstr ""
+msgstr "Система управления процессом (с квитированием)"
 
 #: ../../docs/Аварии/Аварии.rst:106
 msgid "Система управления процессом (с квитированием)"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:107
-msgid "20"
-msgstr ""
-
 #: ../../docs/Аварии/Аварии.rst:110
 msgid "System messages – with ack"
-msgstr ""
+msgstr "Системные сообщения"
 
 #: ../../docs/Аварии/Аварии.rst:111
 msgid "Системные сообщения"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:112
-msgid "21"
-msgstr ""
-
 #: ../../docs/Аварии/Аварии.rst:115
 msgid "Process control system – without ack"
-msgstr ""
+msgstr "Система управления процессом (без квитирования)"
 
 #: ../../docs/Аварии/Аварии.rst:116
 msgid "Система управления процессом (без квитирования)"
 msgstr ""
 
-#: ../../docs/Аварии/Аварии.rst:117
-msgid "22"
-msgstr "22"
-
 #: ../../docs/Аварии/Аварии.rst:120
 msgid "Operator input messages – without ack"
-msgstr ""
+msgstr "Сообщения от оператора"
 
 #: ../../docs/Аварии/Аварии.rst:121
 msgid "Сообщения от оператора"
@@ -1537,7 +2859,7 @@ msgstr ""
 #: ../../docs/Цвета/Цвета.rst:290
 #: ../../docs/Цвета/Цвета.rst:690
 msgid "BackColor"
-msgstr ""
+msgstr "BackColor"
 
 #: ../../docs/Цвета/Цвета.rst:21
 msgid "282"
@@ -1547,7 +2869,7 @@ msgstr "282"
 #: ../../docs/Цвета/Цвета.rst:183
 #: ../../docs/Цвета/Цвета.rst:243
 msgid "206, 206, 206"
-msgstr ""
+msgstr "206, 206, 206"
 
 #: ../../docs/Цвета/Цвета.rst:26
 msgid "283"
@@ -1561,7 +2883,7 @@ msgstr "128, 128, 128"
 #: ../../docs/Цвета/Цвета.rst:30
 #: ../../docs/Цвета/Цвета.rst:700
 msgid "BorderColor"
-msgstr ""
+msgstr "BorderColor"
 
 #: ../../docs/Цвета/Цвета.rst:31
 msgid "284"
@@ -1577,7 +2899,7 @@ msgstr "255, 255, 255"
 
 #: ../../docs/Цвета/Цвета.rst:35
 msgid "BackColorTop"
-msgstr ""
+msgstr "BackColorTop"
 
 #: ../../docs/Цвета/Цвета.rst:36
 msgid "285"
@@ -1585,7 +2907,7 @@ msgstr "285"
 
 #: ../../docs/Цвета/Цвета.rst:40
 msgid "BackColorBottom"
-msgstr ""
+msgstr "BackColorBottom"
 
 #: ../../docs/Цвета/Цвета.rst:41
 msgid "286"
@@ -2219,7 +3541,7 @@ msgstr "98, 172, 170"
 #: ../../docs/Цвета/Цвета.rst:694
 #: ../../docs/Цвета/Цвета.rst:699
 msgid "rect_selectionBorder"
-msgstr ""
+msgstr "rect_selectionBorder"
 
 #: ../../docs/Цвета/Цвета.rst:691
 msgid "414"
@@ -2232,3 +3554,6 @@ msgstr "177, 207, 205"
 #: ../../docs/Цвета/Цвета.rst:696
 msgid "415"
 msgstr "415"
+
+#~ msgid "CFC/SFC"
+#~ msgstr "Программно"

@@ -14,6 +14,7 @@ Welcome to PCSN's documentation!
    docs/Цвета/Цвета
    docs/Аварии/Аварии
    docs/Motor and valve blocks/Motor and valve blocks
+   docs/Interlock blocks/Interlock blocks
 
 
 Indices and tables
