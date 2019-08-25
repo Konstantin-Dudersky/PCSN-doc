@@ -1,8 +1,8 @@
-Basics of APL
+Basics
 =============
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    Functions of the blocks/Functions of the blocks

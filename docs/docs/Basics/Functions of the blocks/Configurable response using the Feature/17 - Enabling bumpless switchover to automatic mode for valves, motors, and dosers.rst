@@ -3,7 +3,7 @@
 
 Feature bit
 -----------
-Number of the Feature bit: 17
+Number of the ``Feature`` bit: 17
 
 Bumpless switchover
 -------------------

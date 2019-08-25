@@ -2,7 +2,7 @@ Intlk16 - Interlock display with 16 input signals
 =================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    Description of Intlk16

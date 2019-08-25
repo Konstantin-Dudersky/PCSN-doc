@@ -4,7 +4,7 @@
 Feature bit
 -----------
 
-Number of the Feature bit: 1
+Number of the ``Feature`` bit: 1
 
 Reaction to the out of service mode
 -----------------------------------

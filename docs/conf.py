@@ -30,7 +30,10 @@ import sphinx_rtd_theme
 # ones.
 extensions = [
     'sphinx_rtd_theme',
+    'sphinx.ext.todo',
 ]
+
+todo_include_todos = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -71,10 +74,8 @@ latex_engine = 'xelatex'
 
 # команды:
 
-# генерация переводов:
-# sphinx-build -b gettext . _build/gettext
-# sphinx-intl update -p _build/gettext -l ru
+# генерация файлов для перевода:
+# sphinx-build -b gettext . _build/gettext; sphinx-intl update -p _build/gettext -l ru
 
-# собрать html с переводом: 
-# sphinx-build -b html -D language=ru . _build/html/ru
-# sphinx-build -b html -D language=en . _build/html/en
+# собрать html:
+# sphinx-build -b html -D language=en . _build/html/en; sphinx-build -b html -D language=ru . _build/html/ru

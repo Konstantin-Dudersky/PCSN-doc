@@ -4,7 +4,7 @@
 Feature bit
 -----------
 
-Number of the Feature bit: 0
+Number of the ``Feature`` bit: 0
 
 Set startup characteristics
 ---------------------------

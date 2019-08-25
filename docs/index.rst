@@ -10,11 +10,15 @@ Welcome to PCSN's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   docs/Basics of APL/Basics of APL
-   docs/Цвета/Цвета
+   docs/Basics/Basics
+   docs/Colors/Colors
    docs/Аварии/Аварии
    docs/Motor and valve blocks/Motor and valve blocks
    docs/Interlock blocks/Interlock blocks
+
+
+.. todolist::
+
 
 
 Indices and tables

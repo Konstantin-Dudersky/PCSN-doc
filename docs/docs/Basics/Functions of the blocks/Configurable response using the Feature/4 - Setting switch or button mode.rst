@@ -4,7 +4,7 @@
 Feature bit
 -----------
 
-Number of the Feature bit: 4
+Number of the ``Feature`` bit: 4
 
 
 Setting switch or button mode (input signal as pulse signal or as static signal)
