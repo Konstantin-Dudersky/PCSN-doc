@@ -12,5 +12,6 @@ Functions of the blocks
    Error handling/Error handling
    Functions for controllers/Functions for controllers
    Messaging/Messaging
+   Settings for operator control and monitoring/Settings for operator control and monitoring
 
 

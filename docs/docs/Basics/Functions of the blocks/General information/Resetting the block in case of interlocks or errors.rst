@@ -47,13 +47,13 @@ The following applies with ``LocalSetting`` 1 or 3:
 
 - The monitoring error, the external error and the interlocks cannot be reset when the control and feedback signals do not match.
 - When the control and feedback signals match, the monitoring error, external error and the interlocks are reset by stopping (``StopLocal = 1``) the drive.
-- With Vlv2WayL in the ``MonSafePos = 1`` setting, a monitoring error is reset by Pos0Local = 1.
+- With Vlv2WayL in the ``MonSafePos = 1`` setting, a monitoring error is reset by ``Pos0Local = 1``.
 - With VlvL, VlvMotL in the ``MonSafePos = 1`` setting, a monitoring error is reset with the local command, which moves the valve to the neutral position.
 - With Vlv2WayL, VlvMotL and VlvL in the ``MonSafePos = 0`` setting, no reset of the monitoring error is required. The currently pending control is in effect.
 - With Vlv2WayL, VlvL and VlvMotL, an external error is reset with the local command, which moves the valve to the neutral position
 - With DoseL, you must acknowledge the protection (``Protect``) and flow alarms with a positive edge at the ``CancelLocal`` or ``PauseLocal`` output parameter.
 
-The following applies with LocalSetting 2, 4 or 5:
+The following applies with ``LocalSetting`` 2, 4 or 5:
 
 - No reset required.
 
@@ -118,7 +118,7 @@ Tabular overview for resetting for interlocks and errors
 
      - After the interlock condition has gone, the currently pending control function becomes active again.
 
-     - The following applies with ``LocalSetting`` = 1 or 3:
+     - The following applies with ``LocalSetting`` 1 or 3:
 
        - **Generally**: When the control and feedback signals match, reset via ``StopLocal = 1``.
 
@@ -126,7 +126,7 @@ Tabular overview for resetting for interlocks and errors
 
        - **DoseL** : Reset via a positive edge at ``CancelLocal`` or ``PauseLocal``.
 
-       The following applies with ``LocalSetting`` = 2,4 or 5:
+       The following applies with ``LocalSetting`` 2, 4 or 5:
 
        - No reset required
 
@@ -184,15 +184,15 @@ Tabular overview for resetting for interlocks and errors
 
    * - Local mode
 
-     - The following applies with ``LocalSetting`` = 1 or 3:
+     - The following applies with ``LocalSetting`` 1 or 3:
 
        - When the control and feedback signals of the drive match, reset via ``StopLocal = 1``.
 
-       The following applies with ``LocalSetting`` = 2, 4 or 5:
+       The following applies with ``LocalSetting`` 2, 4 or 5:
 
        - No reset required.
 
-     - The following applies with ``LocalSetting`` = 1 or 3:
+     - The following applies with ``LocalSetting`` 1 or 3:
 
        - When the control and feedback signals of the drive match, reset via ``StopLocal = 1``.
 
@@ -206,7 +206,7 @@ Tabular overview for resetting for interlocks and errors
 
        - With DoseL, resetting via a positive edge at ``CancelLocal`` or ``PauseLocal``.
 
-       The following applies with ``LocalSetting`` = 2, 4 or 5:
+       The following applies with ``LocalSetting`` 2, 4 or 5:
 
        - No reset required.
 

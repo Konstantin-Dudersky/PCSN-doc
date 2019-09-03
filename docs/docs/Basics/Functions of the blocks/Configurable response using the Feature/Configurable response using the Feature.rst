@@ -17,9 +17,12 @@ Configurable response using the Feature
    17 - Enabling bumpless switchover to automatic mode for valves, motors, and dosers
    18 - Activating error state for external process control error CSF
    18 - Disabling bumpless switchover to automatic mode for controllers
+   19 - Reset even with locked state
    21 - Enable bumpless switchover to Automatic mode for operator only
    21 - First-in detection response to deactivation
    23 - Evaluation of signal status
    24 - Enabling local operator authorization
+   25 - Suppression of all messages
    30 - Set reset depending on the operating mode or the LiOp parameter
    31 - Activating recording of the first signal
+   31 - Activating reset of protection and error in manual mode
